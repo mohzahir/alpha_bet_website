@@ -7,10 +7,10 @@
                     <div class="main-banner-content">
                         <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{ __('locale.WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY') }}</span>
                         <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{ __('locale.We Make The Best IT Solutions') }}  <span class="overlay"></span></h1>
-                        <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor.</p>
+                        <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{  __('locale.overview.description') }}</p>
                         
                         <div class="banner-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                            <a href="contact.html" class="default-btn">Get Started</a>
+                            <a href="contact.html" class="default-btn">{{ __('locale.Get Started') }}</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                                 <h3>
                                     <a href="services-details.html">Product Design</a>
                                 </h3>
-                                <a href="services-details.html" class="features-btn">View More</a>
+                                <a href="services-details.html" class="features-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                                 <h3>
                                     <a href="services-details.html">Development</a>
                                 </h3>
-                                <a href="services-details.html" class="features-btn">View More</a>
+                                <a href="services-details.html" class="features-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                                 <h3>
                                     <a href="services-details.html">Data Analysis</a>
                                 </h3>
-                                <a href="services-details.html" class="features-btn">View More</a>
+                                <a href="services-details.html" class="features-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
@@ -137,9 +137,9 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="about-wrap-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                        <div class="about-bg-text">ABOUT US</div>
-                        <span>WHO WE ARE</span>
-                        <h3>Your Trusted Partner For All IT Solutions <span class="overlay"></span></h3>
+                        <div class="about-bg-text">{{ __('locale.ABOUT US') }}</div>
+                        <span>{{ __('locale.WHO WE ARE') }}</span>
+                        <h3>{{ __('locale.about.title') }} <span class="overlay"></span></h3>
                         <p>We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p>
                     </div>
                 </div>
@@ -149,18 +149,18 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6">
                         <div class="single-about-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                            <h3>Our Vision</h3>
+                            <h3>{{ __('locale.Our Vision') }}</h3>
                             <p>Lorem ipsum dolor sit amet consetetur sadip scing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyamei erat sed diam voluptua at vero eos et accusam et justo duo.</p>
                             
                             <div class="about-btn">
-                                <a href="about-style-1.html" class="default-btn">Know More About Us</a>
+                                <a href="about-style-1.html" class="default-btn">{{ __('locale.Know More About Us') }}</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="single-about-card" data-aos="fade-down" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                            <h3>Our Mission</h3>
+                            <h3>{{ __('locale.Our Mission') }}</h3>
                             <p>Lorem ipsum dolor sit amet consetetur sadip scing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyamei erat sed diam voluptua at vero eos et accusam et justo duo.</p>
                         </div>
                     </div>
@@ -188,19 +188,19 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-12">
                     <div class="services-section-content" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                        <div class="services-bg-text">SERVICES</div>
-                        <span>SERVICES</span>
-                        <h3>We Provide the Best Quality <b>Services</b> <span class="overlay"></span></h3>
+                        <div class="services-bg-text">{{ __('locale.SERVICES') }}</div>
+                        <span>{{ __('locale.SERVICES') }}</span>
+                        <h3>{{ __('locale.We Provide the Best Quality') }} <b>{{ __('locale.SERVICES') }}</b> <span class="overlay"></span></h3>
                         <p>We are technology solutions providing company all over the world doing over 40 years.</p>
                         <div class="services-section-btn">
-                            <a href="services-style-1.html" class="default-btn">Explore All Services</a>
+                            <a href="services-style-1.html" class="default-btn">{{ __('locale.Explore All Services') }}</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-8 col-md-12">
                     <div dir="ltr" class="services-slides owl-carousel owl-theme">
-                        <div class="services-item">
+                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="services-item">
                             <div class="services-image">
                                 <a href="services-details.html"><img src="{{ asset('assets/images/services/services-1.jpg') }}" alt="image"></a>
                             </div>
@@ -209,11 +209,11 @@
                                     <a href="services-details.html">Software Development</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                                <a href="services-details.html" class="services-btn">View More</a>
+                                <a href="services-details.html" class="services-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
 
-                        <div class="services-item">
+                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="services-item">
                             <div class="services-image">
                                 <a href="services-details.html"><img src="{{ asset('assets/images/services/services-2.jpg') }}" alt="image"></a>
                             </div>
@@ -222,11 +222,11 @@
                                     <a href="services-details.html">App Development</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                                <a href="services-details.html" class="services-btn">View More</a>
+                                <a href="services-details.html" class="services-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
 
-                        <div class="services-item">
+                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="services-item">
                             <div class="services-image">
                                 <a href="services-details.html"><img src="{{ asset('assets/images/services/services-3.jpg') }}" alt="image"></a>
                             </div>
@@ -235,11 +235,11 @@
                                     <a href="services-details.html">Web Development</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                                <a href="services-details.html" class="services-btn">View More</a>
+                                <a href="services-details.html" class="services-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
 
-                        <div class="services-item">
+                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="services-item">
                             <div class="services-image">
                                 <a href="services-details.html"><img src="{{ asset('assets/images/services/services-4.jpg') }}" alt="image"></a>
                             </div>
@@ -248,7 +248,7 @@
                                     <a href="services-details.html">Analytic Solutions</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                                <a href="services-details.html" class="services-btn">View More</a>
+                                <a href="services-details.html" class="services-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
@@ -363,7 +363,7 @@
             </div>
             
             <div dir="ltr" class="testimonials-slides owl-carousel owl-theme">
-                <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="single-testimonials-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
                     <div class="info-item-box">
@@ -379,7 +379,7 @@
                     </div>
                 </div>
 
-                <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif  class="single-testimonials-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
 
                     <div class="info-item-box">
@@ -395,7 +395,7 @@
                     </div>
                 </div>
 
-                <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif  class="single-testimonials-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
                     <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
                     <div class="info-item-box">
@@ -411,7 +411,7 @@
                     </div>
                 </div>
 
-                <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif  class="single-testimonials-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                     <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
 
                     <div class="info-item-box">
@@ -427,7 +427,7 @@
                     </div>
                 </div>
 
-                <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif  class="single-testimonials-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
                     <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
                     <div class="info-item-box">
@@ -523,7 +523,7 @@
 
                 <div class="col-lg-8 col-md-12">
                     <div dir="ltr" class="projects-slides-two owl-carousel owl-theme">
-                        <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                             <div class="projects-image">
                                 <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-1.jpg') }}" alt="image"></a>
                             </div>
@@ -531,11 +531,11 @@
                                 <h3>
                                     <a href="projects-details.html">3D Animation</a>
                                 </h3>
-                                <a href="projects-details.html" class="projects-btn">View More</a>
+                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
 
-                        <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
                             <div class="projects-image">
                                 <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-2.jpg') }}" alt="image"></a>
                             </div>
@@ -543,11 +543,11 @@
                                 <h3>
                                     <a href="projects-details.html">Online Banking Software</a>
                                 </h3>
-                                <a href="projects-details.html" class="projects-btn">View More</a>
+                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
 
-                        <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                             <div class="projects-image">
                                 <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-3.jpg') }}" alt="image"></a>
                             </div>
@@ -555,11 +555,11 @@
                                 <h3>
                                     <a href="projects-details.html">Cashier Software</a>
                                 </h3>
-                                <a href="projects-details.html" class="projects-btn">View More</a>
+                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
 
-                        <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                             <div class="projects-image">
                                 <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-4.jpg') }}" alt="image"></a>
                             </div>
@@ -567,11 +567,11 @@
                                 <h3>
                                     <a href="projects-details.html">Analytics Software</a>
                                 </h3>
-                                <a href="projects-details.html" class="projects-btn">View More</a>
+                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
 
-                        <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
                             <div class="projects-image">
                                 <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-5.jpg') }}" alt="image"></a>
                             </div>
@@ -579,7 +579,7 @@
                                 <h3>
                                     <a href="projects-details.html">Messaging App</a>
                                 </h3>
-                                <a href="projects-details.html" class="projects-btn">View More</a>
+                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
@@ -593,37 +593,37 @@
     <div class="partner-area ptb-100">
         <div class="container">
             <div dir="ltr" class="partner-slides owl-carousel owl-theme">
-                <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <a href="#">
                         <img src="{{ asset('assets/images/partner/partner-1.png') }}" alt="partner">
                         <img src="{{ asset('assets/images/partner/partner-hover-1.png') }}" alt="partner">
                     </a>
                 </div>
-                <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <a href="#">
                         <img src="{{ asset('assets/images/partner/partner-2.png') }}" alt="partner">
                         <img src="{{ asset('assets/images/partner/partner-hover-2.png') }}" alt="partner">
                     </a>
                 </div>
-                <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <a href="#">
                         <img src="{{ asset('assets/images/partner/partner-3.png') }}" alt="partner">
                         <img src="{{ asset('assets/images/partner/partner-hover-3.png') }}" alt="partner">
                     </a>
                 </div>
-                <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <a href="#">
                         <img src="{{ asset('assets/images/partner/partner-4.png') }}" alt="partner">
                         <img src="{{ asset('assets/images/partner/partner-hover-4.png') }}" alt="partner">
                     </a>
                 </div>
-                <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <a href="#">
                         <img src="{{ asset('assets/images/partner/partner-5.png') }}" alt="partner">
                         <img src="{{ asset('assets/images/partner/partner-hover-5.png') }}" alt="partner">
                     </a>
                 </div>
-                <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <a href="#">
                         <img src="{{ asset('assets/images/partner/partner-6.png') }}" alt="partner">
                         <img src="{{ asset('assets/images/partner/partner-hover-6.png') }}" alt="partner">
@@ -844,7 +844,7 @@
             </div>
 
             <div dir="ltr" class="blog-slides owl-carousel owl-theme">
-                <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="blog-image">
@@ -858,13 +858,13 @@
                                     <a href="single-blog-1.html">How Technology Dominate In The new World In 2022</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
-                                <a href="single-blog-1.html" class="blog-btn">View More</a>
+                                <a href="single-blog-1.html" class="blog-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="blog-card" data-aos="fade-up" data-aos-delay="890" data-aos-duration="900" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="blog-card" data-aos="fade-up" data-aos-delay="890" data-aos-duration="900" data-aos-once="true">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="blog-image">
@@ -878,13 +878,13 @@
                                     <a href="single-blog-1.html">Top 10 Most Famous Technology Trend In 2022</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
-                                <a href="single-blog-1.html" class="blog-btn">View More</a>
+                                <a href="single-blog-1.html" class="blog-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="blog-image">
@@ -898,13 +898,13 @@
                                     <a href="single-blog-1.html">How Technology Dominate In The new World In 2022</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
-                                <a href="single-blog-1.html" class="blog-btn">View More</a>
+                                <a href="single-blog-1.html" class="blog-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="blog-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="blog-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="blog-image">
@@ -918,7 +918,7 @@
                                     <a href="single-blog-1.html">Top 10 Most Famous Technology Trend In 2022</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
-                                <a href="single-blog-1.html" class="blog-btn">View More</a>
+                                <a href="single-blog-1.html" class="blog-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
