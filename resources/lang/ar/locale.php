@@ -21,5 +21,8 @@ return [
     "Explore All Services" => "تصفح جميع الخدمات",
     "We Provide the Best Quality" => "نحن نقدم افضل انواع",
     "View More" => "عرض المذيد",
+    "PROCESS" => "الالية",
+    "WORK PROCESS" => "الية العمل",
+    "We Follow Four Simple Steps" => "نتبع أربع خطوات بسيطة",
 
 ];

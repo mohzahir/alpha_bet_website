@@ -262,9 +262,9 @@
     <div class="choose-area pt-100 pb-75">
         <div class="container">
             <div class="section-title section-style-two">
-                <div class="section-bg-text">PROCESS</div>
-                <span>WORK PROCESS</span>
-                <h2>We Follow Four Simple Steps <span class="overlay"></span></h2>
+                <div class="section-bg-text">{{ __('locale.PROCESS') }}</div>
+                <span>{{ __('locale.WORK PROCESS') }}</span>
+                <h2>{{ __('locale.We Follow Four Simple Steps') }} <span class="overlay"></span></h2>
                 <p>We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.</p>
             </div>
 

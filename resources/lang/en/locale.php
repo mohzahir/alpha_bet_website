@@ -21,4 +21,7 @@ return [
     "Explore All Services" => "Explore All Services",
     "We Provide the Best Quality" => "We Provide the Best Quality",
     "View More" => "View More",
+    "PROCESS" => "PROCESS",
+    "WORK PROCESS" => "WORK PROCESS",
+    "We Follow Four Simple Steps" => "We Follow Four Simple Steps",
 ];
