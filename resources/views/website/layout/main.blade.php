@@ -26,7 +26,7 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
         <!-- <link rel="stylesheet" href="assets/css/rtl.css"> -->
 		
-		<title>Coze - IT Solutions & Technology Services HTML Template</title>
+		<title>{{ env('APP_NAME') }}</title>
 
         <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
     </head>
