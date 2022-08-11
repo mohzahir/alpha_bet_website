@@ -1,132 +1,1542 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<!doctype html>
+<html lang="ar">
     <head>
+        <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Laravel</title>
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <!-- <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.rtl.min.css') }}"> -->
+        <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/fonts/remixicon.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/odometer.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/fancybox.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/nice-select.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/dark.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+        <!-- <link rel="stylesheet" href="assets/css/rtl.css"> -->
+		
+		<title>Coze - IT Solutions & Technology Services HTML Template</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
+        <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
     </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+    <body>
+
+        <!-- Start Preloader Area -->
+        <div class="preloader">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+        
+        <!-- Start Header Area -->
+        <header class="main-header-area">
+            <!-- Start Navbar Area -->
+            <div class="navbar-area navbar-style-two-with-color">
+                <div class="main-responsive-nav">
+                    <div class="container">
+                        <div class="main-responsive-menu">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{{ asset('assets/images/black-logo.png') }}" class="black-logo" alt="image">
+                                    <img src="{{ asset('assets/images/logo.png') }}" class="white-logo" alt="image">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
+                <div class="main-navbar">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="{{ asset('assets/images/black-logo.png') }}" class="black-logo" alt="image">
+                                <img src="{{ asset('assets/images/logo.png') }}" class="white-logo" alt="image">
                             </a>
 
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link active">
+                                            Home 
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
 
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="index.html" class="nav-link">Home Demo - 1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="index-2.html" class="nav-link">Home Demo - 2</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="index-3.html" class="nav-link active">Home Demo - 3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            About 
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="about-style-1.html" class="nav-link">About Style One</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="about-style-2.html" class="nav-link">About Style Two</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="about-style-3.html" class="nav-link">About Style Three</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="gallery.html" class="nav-link">Gallery</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="testimonials.html" class="nav-link">Testimonials</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Services 
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="services-style-1.html" class="nav-link">Services Style One</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="services-style-2.html" class="nav-link">Services Style Two</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="services-details.html" class="nav-link">Services Details</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Pages 
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="pricing.html" class="nav-link">Pricing</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="team.html" class="nav-link">Team</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="faq.html" class="nav-link">FAQ</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link">
+                                                    Events
+                                                    <i class="ri-arrow-right-s-line"></i>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item">
+                                                        <a href="events.html" class="nav-link">Events</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="events-details.html" class="nav-link">Events Details</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link">
+                                                    Career
+                                                    <i class="ri-arrow-right-s-line"></i>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item">
+                                                        <a href="career.html" class="nav-link">Career</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="career-details.html" class="nav-link">Career Details</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link">
+                                                    Courses
+                                                    <i class="ri-arrow-right-s-line"></i>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item">
+                                                        <a href="courses.html" class="nav-link">Courses Grid</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="courses-right-sidebar.html" class="nav-link">Courses Right Sidebar</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="courses-details.html" class="nav-link">Courses Details</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="profile-authentication.html" class="nav-link">Profile Authentication</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="membership-levels.html" class="nav-link">Membership Levels</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="purchase-guide.html" class="nav-link">Purchase Guide</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="terms-of-service.html" class="nav-link">Terms of Service</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="error-404.html" class="nav-link">404 Error</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="coming-soon.html" class="nav-link">Coming Soon</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Projects 
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="projects.html" class="nav-link">Projects</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="projects-details.html" class="nav-link">Projects Details</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Shop 
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="products.html" class="nav-link">Products</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="cart.html" class="nav-link">Cart</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="wishlist.html" class="nav-link">Wishlist</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="checkout.html" class="nav-link">Checkout</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="my-account.html" class="nav-link">My Account</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="products-details.html" class="nav-link">Products Details</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Blog 
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="blog-style-1.html" class="nav-link">Blog Style One</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="blog-style-2.html" class="nav-link">Blog Style Two</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="blog-right-sidebar.html" class="nav-link">Blog Right Sidebar</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="author.html" class="nav-link">Author</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="categories.html" class="nav-link">Categories</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="tags.html" class="nav-link">Tags</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="search-page.html" class="nav-link">Search Page</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link">
+                                                    Single Post 
+                                                    <i class="ri-arrow-down-s-line"></i>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item">
+                                                        <a href="single-blog-1.html" class="nav-link">Default</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="single-blog-2.html" class="nav-link">With Video</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="single-blog-3.html" class="nav-link">With Image Slider</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="pricing.html" class="nav-link">Pricing</a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a href="contact.html" class="nav-link">Contact</a>
+                                    </li>
+                                </ul>
+
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <i class="search-btn ri-search-line"></i>
+                                        <i class="close-btn ri-close-line"></i>
+                                        <div class="search-overlay search-popup">
+                                            <div class='search-box'>
+                                                <form class="search-form">
+                                                    <input class="search-input" placeholder="Search..." type="text">
+    
+                                                    <button class="search-button" type="submit">
+                                                        <i class="ri-search-line"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <div class="side-menu-btn">
+                                            <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="others-option-for-responsive">
+                    <div class="container">
+                        <div class="dot-menu">
+                            <div class="inner">
+                                <div class="circle circle-one"></div>
+                                <div class="circle circle-two"></div>
+                                <div class="circle circle-three"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                            <div class="option-inner">
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <i class="search-btn ri-search-line"></i>
+                                        <i class="close-btn ri-close-line"></i>
+                                        <div class="search-overlay search-popup">
+                                            <div class='search-box'>
+                                                <form class="search-form">
+                                                    <input class="search-input" placeholder="Search..." type="text">
+    
+                                                    <button class="search-button" type="submit">
+                                                        <i class="ri-search-line"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <div class="side-menu-btn">
+                                            <i class="ri-bar-chart-horizontal-line" data-bs-toggle="modal" data-bs-target="#sidebarModal"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+        </header>
+        <!-- End Header Area -->
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+        <!-- Sidebar Modal -->
+        <div class="sidebarModal modal right fade" id="sidebarModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-bs-dismiss="modal"><i class="ri-close-line"></i></button>
+
+                    <div class="modal-body">
+                        <a href="index.html">
+                            <img src="{{ asset('assets/images/black-logo.png') }}" class="black-logo" alt="image">
+                            <img src="{{ asset('assets/images/logo.png') }}" class="white-logo" alt="image">
+                        </a>
+                        <div class="sidebar-content">
+                            <h3>About Us</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                            <div class="sidebar-btn">
+                                <a href="contact.html" class="default-btn">Let’s Talk</a>
+                            </div>
+                        </div>
+                        <div class="sidebar-contact-info">
+                            <h3>Contact Information</h3>
+
+                            <ul class="info-list">
+                                <li><i class="ri-phone-fill"></i> <a href="tel:9901234567">+990-123-4567</a></li>
+                                
+                                <li><i class="ri-mail-line"></i> <a href="/cdn-cgi/l/email-protection#53303c293613343e323a3f7d303c3e"><span class="__cf_email__" data-cfemail="2f4c40554a6f48424e4643014c4042">[email&#160;protected]</span></a></li>
+
+                                <li><i class="ri-map-pin-line"></i> 413 North Las Vegas, NV 89032</li>
+                            </ul>
+                        </div>
+                        <ul class="sidebar-social-list">
+                            <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                        </ul>
+                        <div class="contact-form">
+                            <h3>Ready to Get Started?</h3>
+
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" required data-error="Please enter your name" placeholder="Your name">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" required data-error="Please enter your email" placeholder="Your email address">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="phone_number" class="form-control" required data-error="Please enter your phone number" placeholder="Your phone number">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Write your message..."></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <button type="submit" class="default-btn">Send Message<span></span></button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Sidebar Modal -->
+        
+        <!-- Start Main Banner Area -->
+        <div class="main-banner-area">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="main-banner-content">
+                            <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY</span>
+                            <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We Make The Best IT Solutions <span class="overlay"></span></h1>
+                            <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor.</p>
+                            
+                            <div class="banner-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                                <a href="contact.html" class="default-btn">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="main-banner-image">
+                            <img src="{{ asset('assets/images/main-banner/banner.png') }}" alt="image" data-aos="fade-down" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+
+                            <div class="banner-circle">
+                                <img src="{{ asset('assets/images/main-banner/banner-circle.png') }}" alt="image" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-shape-1">
+                <img src="{{ asset('assets/images/main-banner/banner-shape-1.png') }}" alt="image">
+            </div>
+            <div class="banner-shape-2">
+                <img src="{{ asset('assets/images/main-banner/banner-shape-2.png') }}" alt="image">
+            </div>
+            <div class="banner-dot-shape-1">
+                <img src="{{ asset('assets/images/main-banner/dot-1.png') }}" alt="image">
+            </div>
+            <div class="banner-dot-shape-2">
+                <img src="{{ asset('assets/images/main-banner/dot-2.png') }}" alt="image">
+            </div>
+            <div class="banner-dot-shape-3">
+                <img src="{{ asset('assets/images/main-banner/dot-3.png') }}" alt="image">
+            </div>
+            <div class="banner-dot-shape-4">
+                <img src="{{ asset('assets/images/main-banner/dot-4.png') }}" alt="image">
+            </div>
+            <div class="banner-dot-shape-5">
+                <img src="{{ asset('assets/images/main-banner/dot-5.png') }}" alt="image">
+            </div>
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <!-- End Main Banner Area -->
+        
+        <!-- Start Features Area -->
+        <div class="features-area pb-75">
+            <div class="container">
+                <div class="features-inner-box">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                            <div class="single-features-card" data-tilt>
+                                <div class="features-image" data-tilt>
+                                    <a href="services-details.html"><img src="{{ asset('assets/images/features/features-1.png') }}" alt="image"></a>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a href="services-details.html">Product Design</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
+                                </div>
+                                <div class="hover-content">
+                                    <h3>
+                                        <a href="services-details.html">Product Design</a>
+                                    </h3>
+                                    <a href="services-details.html" class="features-btn">View More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                            <div class="single-features-card" data-tilt>
+                                <div class="features-image" data-tilt>
+                                    <a href="services-details.html"><img src="{{ asset('assets/images/features/features-2.png') }}" alt="image"></a>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a href="services-details.html">Development</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
+                                </div>
+                                <div class="hover-content">
+                                    <h3>
+                                        <a href="services-details.html">Development</a>
+                                    </h3>
+                                    <a href="services-details.html" class="features-btn">View More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                            <div class="single-features-card" data-tilt>
+                                <div class="features-image" data-tilt>
+                                    <a href="services-details.html"><img src="{{ asset('assets/images/features/features-3.png') }}" alt="image"></a>
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a href="services-details.html">Data Analysis</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
+                                </div>
+                                <div class="hover-content">
+                                    <h3>
+                                        <a href="services-details.html">Data Analysis</a>
+                                    </h3>
+                                    <a href="services-details.html" class="features-btn">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Features Area -->
+
+        <!-- Start About Area -->
+        <div class="about-area pb-75">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-wrap-image" data-tilt>
+                            <img src="{{ asset('assets/images/about/about-3.jpg') }}" alt="image" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-wrap-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            <div class="about-bg-text">ABOUT US</div>
+                            <span>WHO WE ARE</span>
+                            <h3>Your Trusted Partner For All IT Solutions <span class="overlay"></span></h3>
+                            <p>We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-inner-box">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-about-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                <h3>Our Vision</h3>
+                                <p>Lorem ipsum dolor sit amet consetetur sadip scing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyamei erat sed diam voluptua at vero eos et accusam et justo duo.</p>
+                                
+                                <div class="about-btn">
+                                    <a href="about-style-1.html" class="default-btn">Know More About Us</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-about-card" data-aos="fade-down" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                                <h3>Our Mission</h3>
+                                <p>Lorem ipsum dolor sit amet consetetur sadip scing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyamei erat sed diam voluptua at vero eos et accusam et justo duo.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-about-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                <div class="card-image" data-tilt>
+                                    <img src="{{ asset('assets/images/about/about-4.jpg') }}" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-circle-shape">
+                <img src="{{ asset('assets/images/about/about-circle.png') }}" alt="image">
+            </div>
+        </div>
+        <!-- End About Area -->
+
+        <!-- Start Services Area -->
+        <div class="services-area margin-zero ptb-100">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="services-section-content" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            <div class="services-bg-text">SERVICES</div>
+                            <span>SERVICES</span>
+                            <h3>We Provide the Best Quality <b>Services</b> <span class="overlay"></span></h3>
+                            <p>We are technology solutions providing company all over the world doing over 40 years.</p>
+                            <div class="services-section-btn">
+                                <a href="services-style-1.html" class="default-btn">Explore All Services</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-md-12">
+                        <div class="services-slides owl-carousel owl-theme">
+                            <div class="services-item">
+                                <div class="services-image">
+                                    <a href="services-details.html"><img src="{{ asset('assets/images/services/services-1.jpg') }}" alt="image"></a>
+                                </div>
+                                <div class="services-content">
+                                    <h3>
+                                        <a href="services-details.html">Software Development</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
+                                    <a href="services-details.html" class="services-btn">View More</a>
+                                </div>
+                            </div>
+
+                            <div class="services-item">
+                                <div class="services-image">
+                                    <a href="services-details.html"><img src="{{ asset('assets/images/services/services-2.jpg') }}" alt="image"></a>
+                                </div>
+                                <div class="services-content">
+                                    <h3>
+                                        <a href="services-details.html">App Development</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
+                                    <a href="services-details.html" class="services-btn">View More</a>
+                                </div>
+                            </div>
+
+                            <div class="services-item">
+                                <div class="services-image">
+                                    <a href="services-details.html"><img src="{{ asset('assets/images/services/services-3.jpg') }}" alt="image"></a>
+                                </div>
+                                <div class="services-content">
+                                    <h3>
+                                        <a href="services-details.html">Web Development</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
+                                    <a href="services-details.html" class="services-btn">View More</a>
+                                </div>
+                            </div>
+
+                            <div class="services-item">
+                                <div class="services-image">
+                                    <a href="services-details.html"><img src="{{ asset('assets/images/services/services-4.jpg') }}" alt="image"></a>
+                                </div>
+                                <div class="services-content">
+                                    <h3>
+                                        <a href="services-details.html">Analytic Solutions</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
+                                    <a href="services-details.html" class="services-btn">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Services Area -->
+        
+        <!-- Start Choose Area -->
+        <div class="choose-area pt-100 pb-75">
+            <div class="container">
+                <div class="section-title section-style-two">
+                    <div class="section-bg-text">PROCESS</div>
+                    <span>WORK PROCESS</span>
+                    <h2>We Follow Four Simple Steps <span class="overlay"></span></h2>
+                    <p>We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-choose-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <div class="choose-image" data-tilt>
+                                <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-1.png') }}" alt="image"></a>
+
+                                <div class="number">1</div>
+                            </div>
+                            <div class="choose-content">
+                                <h3>
+                                    <a href="#">Discussion</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-choose-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                            <div class="choose-image" data-tilt>
+                                <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-2.png') }}" alt="image"></a>
+
+                                <div class="number">2</div>
+                            </div>
+                            <div class="choose-content">
+                                <h3>
+                                    <a href="#">Testing & Trying</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-choose-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                            <div class="choose-image" data-tilt>
+                                <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-3.png') }}" alt="image"></a>
+
+                                <div class="number">3</div>
+                            </div>
+                            <div class="choose-content">
+                                <h3>
+                                    <a href="#">Ideas & Concept</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-choose-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            <div class="choose-image" data-tilt>
+                                <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-4.png') }}" alt="image"></a>
+
+                                <div class="number">4</div>
+                            </div>
+                            <div class="choose-content">
+                                <h3>
+                                    <a href="#">Execute & Install</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Choose Area -->
+
+        <!-- Start Video Area -->
+        <div class="video-area-box">
+            <div class="container">
+                <div class="video-view-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    <div class="video-image">
+                        <img src="{{ asset('assets/images/video/video.jpg') }}" alt="image">
+                    </div>
+
+                    <a href="https://www.youtube.com/watch?v=ODfy2YIKS1M" class="video-btn popup-youtube">
+                        <i class="ri-play-mini-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Video Area -->
+
+        <!-- Start Testimonials Area -->
+        <div class="testimonials-area ptb-100">
+            <div class="container-fluid">
+                <div class="section-title section-style-two">
+                    <div class="section-bg-text">FEEDBACK</div>
+                    <span>TESTIMONIALS</span>
+                    <h2>Our Client's Feedback <span class="overlay"></span></h2>
+                </div>
+                
+                <div class="testimonials-slides owl-carousel owl-theme">
+                    <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                        <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
+
+                        <div class="info-item-box">
+                            <img src="{{ asset('assets/images/testimonials/testimonials-4.jpg') }}" class="rounded-circle" alt="image">
+                            <h4>Bradly Doe, <span>Founder of Medizo</span></h4>
+                            <ul class="rating-list">
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-line"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
+
+                        <div class="info-item-box">
+                            <img src="{{ asset('assets/images/testimonials/testimonials-5.jpg') }}" class="rounded-circle" alt="image">
+                            <h4>Daniel John, <span>Solit Team</span></h4>
+                            <ul class="rating-list">
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-line"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                        <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
+
+                        <div class="info-item-box">
+                            <img src="{{ asset('assets/images/testimonials/testimonials-6.jpg') }}" class="rounded-circle" alt="image">
+                            <h4>Jennifer Smith, <span>Spix Team</span></h4>
+                            <ul class="rating-list">
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-line"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                        <p>The professionalism, collaboration and the design they come up with is pheno-menal. Thanks a lot the Coze Team.</p>
+
+                        <div class="info-item-box">
+                            <img src="{{ asset('assets/images/testimonials/testimonials-7.jpg') }}" class="rounded-circle" alt="image">
+                            <h4>Sarp Karahan, <span>Benzo Team</span></h4>
+                            <ul class="rating-list">
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-line"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+                        <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
+
+                        <div class="info-item-box">
+                            <img src="{{ asset('assets/images/testimonials/testimonials-8.jpg') }}" class="rounded-circle" alt="image">
+                            <h4>Jane Ronan, <span>Lebu Team</span></h4>
+                            <ul class="rating-list">
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-line"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Testimonials Area -->
+
+        <!-- Start Talk Area -->
+        <div class="talk-area ptb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="talk-image" data-tilt>
+                            <img src="{{ asset('assets/images/talk/talk.png') }}" alt="image">
+
+                            <div class="talk-circle">
+                                <img src="{{ asset('assets/images/talk/talk-circle.png') }}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="talk-content">
+                            <div class="talk-bg-text">LET'S TALK</div>
+                            <span>LET'S TALK</span>
+                            <h3>We Would Like To Hear From You Any Question <span class="overlay"></span></h3>
+                            <p>Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p>
+
+                            <form id="contactFormTwo">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" required data-error="Please enter your name" placeholder="Your name">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" required data-error="Please enter your email" placeholder="Your email address">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Write your message..."></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <button type="submit" class="default-btn">Send Message<span></span></button>
+                                        <div id="msgSubmitTwo" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Talk Area -->
+
+        <!-- Start Projects Area -->
+        <div class="projects-area style-two-area ptb-100">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="projects-section-content" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            <div class="projects-bg-text">WORK</div>
+                            <span>PROJECTS</span>
+                            <h3>Our Latest Incredible Client's Project <span class="overlay"></span></h3>
+                            <p>We are technology solutions providing company all over the world doing over 40 years.</p>
+                            <div class="projects-section-btn">
+                                <a href="projects.html" class="default-btn">Explore All Projects</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-md-12">
+                        <div class="projects-slides-two owl-carousel owl-theme">
+                            <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                                <div class="projects-image">
+                                    <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-1.jpg') }}" alt="image"></a>
+                                </div>
+                                <div class="projects-content">
+                                    <h3>
+                                        <a href="projects-details.html">3D Animation</a>
+                                    </h3>
+                                    <a href="projects-details.html" class="projects-btn">View More</a>
+                                </div>
+                            </div>
+        
+                            <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                                <div class="projects-image">
+                                    <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-2.jpg') }}" alt="image"></a>
+                                </div>
+                                <div class="projects-content">
+                                    <h3>
+                                        <a href="projects-details.html">Online Banking Software</a>
+                                    </h3>
+                                    <a href="projects-details.html" class="projects-btn">View More</a>
+                                </div>
+                            </div>
+        
+                            <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                                <div class="projects-image">
+                                    <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-3.jpg') }}" alt="image"></a>
+                                </div>
+                                <div class="projects-content">
+                                    <h3>
+                                        <a href="projects-details.html">Cashier Software</a>
+                                    </h3>
+                                    <a href="projects-details.html" class="projects-btn">View More</a>
+                                </div>
+                            </div>
+        
+                            <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                                <div class="projects-image">
+                                    <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-4.jpg') }}" alt="image"></a>
+                                </div>
+                                <div class="projects-content">
+                                    <h3>
+                                        <a href="projects-details.html">Analytics Software</a>
+                                    </h3>
+                                    <a href="projects-details.html" class="projects-btn">View More</a>
+                                </div>
+                            </div>
+        
+                            <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+                                <div class="projects-image">
+                                    <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-5.jpg') }}" alt="image"></a>
+                                </div>
+                                <div class="projects-content">
+                                    <h3>
+                                        <a href="projects-details.html">Messaging App</a>
+                                    </h3>
+                                    <a href="projects-details.html" class="projects-btn">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Projects Area -->
+
+        <!-- Start Partner Area -->
+        <div class="partner-area ptb-100">
+            <div class="container">
+                <div class="partner-slides owl-carousel owl-theme">
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <a href="#">
+                            <img src="{{ asset('assets/images/partner/partner-1.png') }}" alt="partner">
+                            <img src="{{ asset('assets/images/partner/partner-hover-1.png') }}" alt="partner">
+                        </a>
+                    </div>
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <a href="#">
+                            <img src="{{ asset('assets/images/partner/partner-2.png') }}" alt="partner">
+                            <img src="{{ asset('assets/images/partner/partner-hover-2.png') }}" alt="partner">
+                        </a>
+                    </div>
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <a href="#">
+                            <img src="{{ asset('assets/images/partner/partner-3.png') }}" alt="partner">
+                            <img src="{{ asset('assets/images/partner/partner-hover-3.png') }}" alt="partner">
+                        </a>
+                    </div>
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <a href="#">
+                            <img src="{{ asset('assets/images/partner/partner-4.png') }}" alt="partner">
+                            <img src="{{ asset('assets/images/partner/partner-hover-4.png') }}" alt="partner">
+                        </a>
+                    </div>
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <a href="#">
+                            <img src="{{ asset('assets/images/partner/partner-5.png') }}" alt="partner">
+                            <img src="{{ asset('assets/images/partner/partner-hover-5.png') }}" alt="partner">
+                        </a>
+                    </div>
+                    <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <a href="#">
+                            <img src="{{ asset('assets/images/partner/partner-6.png') }}" alt="partner">
+                            <img src="{{ asset('assets/images/partner/partner-hover-6.png') }}" alt="partner">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Partner Area -->
+
+        <!-- Start Team Area -->
+        <div class="team-area pt-100 pb-75">
+            <div class="container">
+                <div class="section-title section-style-two">
+                    <div class="section-bg-text">TEAM</div>
+                    <span>TEAM MEMBER</span>
+                    <h2>Our Expert IT Consultants <span class="overlay"></span></h2>
+                    <p>We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-team-card">
+                            <div class="team-image" data-tilt>
+                                <img src="{{ asset('assets/images/team/team-1.png') }}" alt="image">
+
+                                <ul class="team-social">
+                                    <li>
+                                        <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                            <i class="ri-facebook-fill"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/?lang=en" target="_blank">
+                                            <i class="ri-twitter-fill"></i>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i class="ri-instagram-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3>Johny Smith</h3>
+                                <span>President & CEO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-team-card">
+                            <div class="team-image" data-tilt>
+                                <img src="{{ asset('assets/images/team/team-2.png') }}" alt="image">
+
+                                <ul class="team-social">
+                                    <li>
+                                        <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                            <i class="ri-facebook-fill"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/?lang=en" target="_blank">
+                                            <i class="ri-twitter-fill"></i>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i class="ri-instagram-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3>Jennifer Walter</h3>
+                                <span>Product Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-team-card">
+                            <div class="team-image" data-tilt>
+                                <img src="{{ asset('assets/images/team/team-3.png') }}" alt="image">
+
+                                <ul class="team-social">
+                                    <li>
+                                        <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                            <i class="ri-facebook-fill"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/?lang=en" target="_blank">
+                                            <i class="ri-twitter-fill"></i>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i class="ri-instagram-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3>Jems Rodrigez</h3>
+                                <span>UI UX Designer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-team-card">
+                            <div class="team-image" data-tilt>
+                                <img src="{{ asset('assets/images/team/team-4.png') }}" alt="image">
+
+                                <ul class="team-social">
+                                    <li>
+                                        <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                            <i class="ri-facebook-fill"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://twitter.com/?lang=en" target="_blank">
+                                            <i class="ri-twitter-fill"></i>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank">
+                                            <i class="ri-instagram-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3>Deren Bravoo</h3>
+                                <span>Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Team Area -->
+
+        <!-- Start Overview Area -->
+        <div class="overview-area pt-100 pb-75">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="overview-card">
+                            <h3>Call Us</h3>
+                            <span>
+                                <a href="tel:9901234567">+990-123-4567</a>
+                            </span>
+
+                            <div class="overview-shape">
+                                <img src="{{ asset('assets/images/overview/overview-shape.png') }}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="overview-card">
+                            <h3>Email Us</h3>
+                            <span>
+                                <a href="/cdn-cgi/l/email-protection#a2cacbc1cdd8c7e2c5cfc3cbce8cc1cdcf"><span class="__cf_email__" data-cfemail="610908020e1b0421060c00080d4f020e0c">[email&#160;protected]</span></a>
+                            </span>
+
+                            <div class="overview-shape">
+                                <img src="{{ asset('assets/images/overview/overview-shape.png') }}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="overview-card">
+                            <h3>Tech Support</h3>
+                            <span>
+                                <a href="tel:15143125678">+1 (514) 312-5678</a>
+                            </span>
+
+                            <div class="overview-shape">
+                                <img src="{{ asset('assets/images/overview/overview-shape.png') }}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="overview-card">
+                            <h3>Visit Us</h3>
+                            <span>413 North Las Vegas, NV 89032</span>
+
+                            <div class="overview-shape">
+                                <img src="{{ asset('assets/images/overview/overview-shape.png') }}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Overview Area -->
+
+        <!-- Start Blog Area -->
+        <div class="blog-area pt-100 pb-75">
+            <div class="container">
+                <div class="section-title">
+                    <span>ARTICLE</span>
+                    <h2>Read Our Latest Blog <span class="overlay"></span></h2>
+                </div>
+
+                <div class="blog-slides owl-carousel owl-theme">
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="blog-image">
+                                    <a href="single-blog-1.html"><img src="{{ asset('assets/images/blog/blog-1.jpg') }}" alt="image"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="blog-content">
+                                    <div class="date">9th July, 2022</div>
+                                    <h3>
+                                        <a href="single-blog-1.html">How Technology Dominate In The new World In 2022</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
+                                    <a href="single-blog-1.html" class="blog-btn">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="890" data-aos-duration="900" data-aos-once="true">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="blog-image">
+                                    <a href="single-blog-1.html"><img src="{{ asset('assets/images/blog/blog-2.jpg') }}" alt="image"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="blog-content">
+                                    <div class="date">7th July, 2022</div>
+                                    <h3>
+                                        <a href="single-blog-1.html">Top 10 Most Famous Technology Trend In 2022</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
+                                    <a href="single-blog-1.html" class="blog-btn">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="blog-image">
+                                    <a href="single-blog-1.html"><img src="{{ asset('assets/images/blog/blog-1.jpg') }}" alt="image"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="blog-content">
+                                    <div class="date">9th July, 2022</div>
+                                    <h3>
+                                        <a href="single-blog-1.html">How Technology Dominate In The new World In 2022</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
+                                    <a href="single-blog-1.html" class="blog-btn">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="blog-image">
+                                    <a href="single-blog-1.html"><img src="{{ asset('assets/images/blog/blog-2.jpg') }}" alt="image"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="blog-content">
+                                    <div class="date">7th July, 2022</div>
+                                    <h3>
+                                        <a href="single-blog-1.html">Top 10 Most Famous Technology Trend In 2022</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eir m od tempor invidunt ut labore.</p>
+                                    <a href="single-blog-1.html" class="blog-btn">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Blog Area -->
+
+        <!-- End Footer Area -->
+        <footer class="footer-area with-black-background margin-zero pt-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <div class="widget-logo">
+                                <a href="index.html"><img src="{{ asset('assets/images/logo.png') }}" alt="image"></a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consetetur sadi scing elitr sed diam nonumy.</p>
+
+                            <ul class="widget-social">
+                                <li>
+                                    <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                        <i class="ri-facebook-fill"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class="ri-twitter-fill"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <i class="ri-youtube-fill"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://vimeo.com/" target="_blank">
+                                        <i class="ri-vimeo-fill"></i>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class="ri-instagram-line"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                            <h3>Links</h3>
+
+                            <ul class="quick-links">
+                                <li><a href="about-style-1.html">About Us</a></li>
+                                <li><a href="services-style-2.html">Services</a></li>
+                                <li><a href="blog-style-1.html">News</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                            <h3>Pages</h3>
+
+                            <ul class="quick-links">
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="purchase-guide.html">Purchase Guide</a></li>
+                                <li><a href="faq.html">FAQ's</a></li>
+                                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            <h3>Subscribe Newsletter</h3>
+
+                            <form class="newsletter-form" data-bs-toggle="validator">
+                                <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
+        
+                                <button type="submit" class="default-btn">Subscribe</button>
+                                <div id="validator-newsletter" class="form-result"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-area-content">
+                        <p>
+                            Copyright @<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Coze All Rights Reserved by
+                            <a href="https://envytheme.com/" target="_blank"> EnvyTheme</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-shape-1">
+                <img src="{{ asset('assets/images/footer/footer-shape-1.png') }}" alt="image">
+            </div>
+            <div class="footer-shape-2">
+                <img src="{{ asset('assets/images/footer/footer-shape-2.png') }}" alt="image">
+            </div>
+            <div class="footer-shape-3">
+                <img src="{{ asset('assets/images/footer/footer-shape-3.png') }}" alt="image">
+            </div>
+        </footer>
+        <!-- End Footer Area -->  
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class="ri-arrow-up-s-line"></i>
+        </div>
+        <!-- End Go Top Area -->
+
+        <!-- Links of JS files -->
+        <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/js/jquery.meanmenu.js') }}"></script> 
+        <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('assets/js/jquery.appear.js') }}"></script>
+        <script src="{{ asset('assets/js/odometer.min.js') }}"></script>
+        <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('assets/js/fancybox.min.js') }}"></script>
+        <script src="{{ asset('assets/js/tweenmax.min.js') }}"></script>
+        <script src="{{ asset('assets/js/ScrollMagic.min.js') }}"></script>
+        <script src="{{ asset('assets/js/animation.gsap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/debug.addIndicators.min.js') }}"></script>
+        <script src="{{ asset('assets/js/mixitup.min.js') }}"></script>
+        <script src="{{ asset('assets/js/nice-select.min.js') }}"></script>
+        <script src="{{ asset('assets/js/tilt.jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
+		<script src="{{ asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
+		<script src="{{ asset('assets/js/form-validator.min.js') }}"></script>
+        <script src="{{ asset('assets/js/contact-form-script.js') }}"></script>
+        <script src="{{ asset('assets/js/aos.js') }}"></script>
+        <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+        <script src="{{ asset('assets/js/main.js') }}"></script>
     </body>
 </html>
