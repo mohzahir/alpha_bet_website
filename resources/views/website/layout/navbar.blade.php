@@ -6,8 +6,8 @@
                 <div class="main-responsive-menu">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="{{ asset('assets/images/black-logo.png') }}" class="black-logo" alt="image">
-                            <img src="{{ asset('assets/images/logo.png') }}" class="white-logo" alt="image">
+                            <img src="{{ asset('assets/images/black-logo.png') }}" style="width: 132px; height: 50px" class="black-logo" alt="image">
+                            <img src="{{ asset('assets/images/logo.png') }}" style="width: 132px; height: 50px" class="white-logo" alt="image">
                         </a>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="index.html">
-                        <img src="{{ asset('assets/images/black-logo.png') }}" class="black-logo" alt="image">
+                        <img src="{{ asset('assets/images/black-logo.png') }}" style="width: 132px; height: 50px" class="black-logo" class="black-logo" alt="image">
                         <img src="{{ asset('assets/images/logo.png') }}" class="white-logo" alt="image">
                     </a>
 

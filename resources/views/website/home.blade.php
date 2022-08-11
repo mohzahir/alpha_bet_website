@@ -199,7 +199,7 @@
                 </div>
 
                 <div class="col-lg-8 col-md-12">
-                    <div class="services-slides owl-carousel owl-theme">
+                    <div dir="ltr" class="services-slides owl-carousel owl-theme">
                         <div class="services-item">
                             <div class="services-image">
                                 <a href="services-details.html"><img src="{{ asset('assets/images/services/services-1.jpg') }}" alt="image"></a>
@@ -362,7 +362,7 @@
                 <h2>Our Client's Feedback <span class="overlay"></span></h2>
             </div>
             
-            <div class="testimonials-slides owl-carousel owl-theme">
+            <div dir="ltr" class="testimonials-slides owl-carousel owl-theme">
                 <div class="single-testimonials-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <p>We look and sound so good! I am still in shock at how smooth this process was. The professionalism, collaboration and the design they come up is great.</p>
 
@@ -522,7 +522,7 @@
                 </div>
 
                 <div class="col-lg-8 col-md-12">
-                    <div class="projects-slides-two owl-carousel owl-theme">
+                    <div dir="ltr" class="projects-slides-two owl-carousel owl-theme">
                         <div class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                             <div class="projects-image">
                                 <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-1.jpg') }}" alt="image"></a>
@@ -592,7 +592,7 @@
     <!-- Start Partner Area -->
     <div class="partner-area ptb-100">
         <div class="container">
-            <div class="partner-slides owl-carousel owl-theme">
+            <div dir="ltr" class="partner-slides owl-carousel owl-theme">
                 <div class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <a href="#">
                         <img src="{{ asset('assets/images/partner/partner-1.png') }}" alt="partner">
@@ -843,7 +843,7 @@
                 <h2>Read Our Latest Blog <span class="overlay"></span></h2>
             </div>
 
-            <div class="blog-slides owl-carousel owl-theme">
+            <div dir="ltr" class="blog-slides owl-carousel owl-theme">
                 <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
