@@ -5,8 +5,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="main-banner-content">
-                        <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY</span>
-                        <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We Make The Best IT Solutions <span class="overlay"></span></h1>
+                        <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{ __('locale.WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY') }}</span>
+                        <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{ __('locale.We Make The Best IT Solutions') }}  <span class="overlay"></span></h1>
                         <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor.</p>
                         
                         <div class="banner-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">

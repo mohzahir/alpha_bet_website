@@ -26,39 +26,47 @@
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                    Home 
+                                    {{ __('locale.Home') }} 
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    About 
+                                    {{ __('locale.About') }} 
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Services 
+                                    {{ __('locale.Services') }} 
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Projects 
+                                    {{ __('locale.Projects') }} 
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Products 
+                                    {{ __('locale.Products') }}  
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Contacts 
+                                    {{ __('locale.Contract') }}  
                                 </a>
                             </li>
+                            @if(app()->getLocale() == 'en')
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{ route('set.locale', ['locale' => 'ar']) }}" class="nav-link">
                                     العربية 
                                 </a>
                             </li>
+                            @else
+                            <li class="nav-item">
+                                <a href="{{ route('set.locale', ['locale' => 'en']) }}" class="nav-link">
+                                    English 
+                                </a>
+                            </li>
+                            @endif
 
                             <!-- <li class="nav-item">
                                 <a href="#" class="nav-link">

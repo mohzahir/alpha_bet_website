@@ -14,4 +14,10 @@ use App\Http\Controllers\website\HomeController;
 |
 */
 
+Route::get('language/{locale}', function ($locale) {
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+    return redirect()->back();
+})->name('set.locale');
+
 Route::get('/', [HomeController::class, 'index'])->name('home');

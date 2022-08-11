@@ -1,14 +1,14 @@
 
 <!doctype html>
-<html lang="ar">
+<html @if(app()->getLocale() == "ar") lang='ar' dir='rtl' @else lang='en' dir='ltr' @endif>
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Links of CSS files -->
+        @if(app()->getLocale() == 'en')
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-        <!-- <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.rtl.min.css') }}"> -->
         <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.css') }}">
@@ -24,7 +24,35 @@
         <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/dark.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-        <!-- <link rel="stylesheet" href="assets/css/rtl.css"> -->
+        @else
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.rtl.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/fonts/remixicon.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/odometer.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/fancybox.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/nice-select.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/dark.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@800&display=swap" rel="stylesheet">
+        <style>
+            body, h1, h2, h3, h4, h5, h6, span, p, i, a, button, input, .nav-link{
+                font-family: 'Tajawal', 'sans-serif' !important;
+            }
+        </style>
+        @endif
 		
 		<title>{{ env('APP_NAME') }}</title>
 
