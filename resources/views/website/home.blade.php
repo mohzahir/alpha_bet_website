@@ -61,27 +61,31 @@
         <div class="container">
             <div class="features-inner-box">
                 <div class="row justify-content-center">
+                    @if(count($featured_services) > 0)
+                    @foreach($featured_services as $service)
                     <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                         <div class="single-features-card" data-tilt>
                             <div class="features-image" data-tilt>
-                                <a href="services-details.html"><img src="{{ asset('assets/images/features/features-1.png') }}" alt="image"></a>
+                                <a href="{{ route('service.details', ['service' => $service->id]) }}"><img src="{{ asset($service->photo) }}" alt="image"></a>
                             </div>
                             <div class="content">
                                 <h3>
-                                    <a href="services-details.html">Product Design</a>
+                                    <a href="{{ route('service.details', ['service' => $service->id]) }}">{{ $locale == 'ar' ? $service->name_ar : $service->name}}</a>
                                 </h3>
-                                <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
+                                <p>{{ Str::limit($locale == 'ar' ? $service->short_descr_ar : $service->short_descr, 80) }}</p>
                             </div>
                             <div class="hover-content">
                                 <h3>
-                                    <a href="services-details.html">Product Design</a>
+                                    <a href="{{ route('service.details', ['service' => $service->id]) }}">{{ $locale == 'ar' ? $service->name_ar : $service->name}}</a>
                                 </h3>
-                                <a href="services-details.html" class="features-btn">{{ __('locale.View More') }}</a>
+                                <a href="{{ route('service.details', ['service' => $service->id]) }}" class="features-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
+                    @endforeach
+                    @endif
 
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                    <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                         <div class="single-features-card" data-tilt>
                             <div class="features-image" data-tilt>
                                 <a href="services-details.html"><img src="{{ asset('assets/images/features/features-2.png') }}" alt="image"></a>
@@ -119,7 +123,7 @@
                                 <a href="services-details.html" class="features-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -137,7 +141,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="about-wrap-content" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                        <div class="about-bg-text">{{ __('locale.ABOUT US') }}</div>
+                        <div class="about-bg-text">ABOUT US</div>
                         <span>{{ __('locale.WHO WE ARE') }}</span>
                         <h3>{{ __('locale.about.title') }} <span class="overlay"></span></h3>
                         <p>We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p>
@@ -188,32 +192,36 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-12">
                     <div class="services-section-content" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                        <div class="services-bg-text">{{ __('locale.SERVICES') }}</div>
+                        <div class="services-bg-text">SERVICES</div>
                         <span>{{ __('locale.SERVICES') }}</span>
                         <h3>{{ __('locale.We Provide the Best Quality') }} <b>{{ __('locale.SERVICES') }}</b> <span class="overlay"></span></h3>
                         <p>We are technology solutions providing company all over the world doing over 40 years.</p>
                         <div class="services-section-btn">
-                            <a href="services-style-1.html" class="default-btn">{{ __('locale.Explore All Services') }}</a>
+                            <a href="{{ route('services') }}" class="default-btn">{{ __('locale.Explore All Services') }}</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-8 col-md-12">
                     <div dir="ltr" class="services-slides owl-carousel owl-theme">
+                        @if(count($services) > 0)
+                        @foreach($services as $service)
                         <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="services-item">
                             <div class="services-image">
-                                <a href="services-details.html"><img src="{{ asset('assets/images/services/services-1.jpg') }}" alt="image"></a>
+                                <a href="{{ route('service.details', ['service' => $service->id]) }}"><img src="{{ asset($service->photo) }}" alt="image"></a>
                             </div>
                             <div class="services-content">
                                 <h3>
-                                    <a href="services-details.html">Software Development</a>
+                                    <a href="{{ route('service.details', ['service' => $service->id]) }}">{{ $locale == 'ar' ? $service->name_ar : $service->name}}</a>
                                 </h3>
-                                <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
-                                <a href="services-details.html" class="services-btn">{{ __('locale.View More') }}</a>
+                                <p>{{ Str::limit($locale == 'ar' ? $service->short_descr_ar : $service->short_descr, 50)}}</p>
+                                <a href="{{ route('service.details', ['service' => $service->id]) }}" class="services-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
+                        @endforeach
+                        @endif
 
-                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="services-item">
+                        <!-- <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="services-item">
                             <div class="services-image">
                                 <a href="services-details.html"><img src="{{ asset('assets/images/services/services-2.jpg') }}" alt="image"></a>
                             </div>
@@ -250,7 +258,7 @@
                                 <p>Lorem ipsum dolor sit amet con setetur sadipscing elitr sed…</p>
                                 <a href="services-details.html" class="services-btn">{{ __('locale.View More') }}</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -262,7 +270,7 @@
     <div class="choose-area pt-100 pb-75">
         <div class="container">
             <div class="section-title section-style-two">
-                <div class="section-bg-text">{{ __('locale.PROCESS') }}</div>
+                <div class="section-bg-text">PROCESS</div>
                 <span>{{ __('locale.WORK PROCESS') }}</span>
                 <h2>{{ __('locale.We Follow Four Simple Steps') }} <span class="overlay"></span></h2>
                 <p>We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.</p>
@@ -358,8 +366,8 @@
         <div class="container-fluid">
             <div class="section-title section-style-two">
                 <div class="section-bg-text">FEEDBACK</div>
-                <span>TESTIMONIALS</span>
-                <h2>Our Client's Feedback <span class="overlay"></span></h2>
+                <span>{{ __('locale.TESTIMONIALS') }}</span>
+                <h2>{{ __('locale.Our Clients Feedback') }} <span class="overlay"></span></h2>
             </div>
             
             <div dir="ltr" class="testimonials-slides owl-carousel owl-theme">
@@ -448,61 +456,7 @@
     <!-- End Testimonials Area -->
 
     <!-- Start Talk Area -->
-    <div class="talk-area ptb-100">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <div class="talk-image" data-tilt>
-                        <img src="{{ asset('assets/images/talk/talk.png') }}" alt="image">
-
-                        <div class="talk-circle">
-                            <img src="{{ asset('assets/images/talk/talk-circle.png') }}" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12">
-                    <div class="talk-content">
-                        <div class="talk-bg-text">LET'S TALK</div>
-                        <span>LET'S TALK</span>
-                        <h3>We Would Like To Hear From You Any Question <span class="overlay"></span></h3>
-                        <p>Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p>
-
-                        <form id="contactFormTwo">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="name" class="form-control" required data-error="Please enter your name" placeholder="Your name">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="email" name="email" class="form-control" required data-error="Please enter your email" placeholder="Your email address">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Write your message..."></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <button type="submit" class="default-btn">Send Message<span></span></button>
-                                    <div id="msgSubmitTwo" class="h3 text-center hidden"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('website.includes.talk')
     <!-- End Talk Area -->
 
     <!-- Start Projects Area -->
@@ -512,11 +466,11 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="projects-section-content" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                         <div class="projects-bg-text">WORK</div>
-                        <span>PROJECTS</span>
-                        <h3>Our Latest Incredible Client's Project <span class="overlay"></span></h3>
+                        <span>{{ __('locale.PROJECTS') }}</span>
+                        <h3>{{ __('locale.Our Latest Incredible Clients Project') }} <span class="overlay"></span></h3>
                         <p>We are technology solutions providing company all over the world doing over 40 years.</p>
                         <div class="projects-section-btn">
-                            <a href="projects.html" class="default-btn">Explore All Projects</a>
+                            <a href="projects.html" class="default-btn">{{ __('locale.Explore All Projects') }}</a>
                         </div>
                     </div>
                 </div>
@@ -639,8 +593,8 @@
         <div class="container">
             <div class="section-title section-style-two">
                 <div class="section-bg-text">TEAM</div>
-                <span>TEAM MEMBER</span>
-                <h2>Our Expert IT Consultants <span class="overlay"></span></h2>
+                <span>{{ __('locale.TEAM MEMBER') }}</span>
+                <h2>{{ __('locale.Our Expert IT Consultants') }} <span class="overlay"></span></h2>
                 <p>We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.</p>
             </div>
 
@@ -778,69 +732,15 @@
     <!-- End Team Area -->
 
     <!-- Start Overview Area -->
-    <div class="overview-area pt-100 pb-75">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="overview-card">
-                        <h3>Call Us</h3>
-                        <span>
-                            <a href="tel:9901234567">+990-123-4567</a>
-                        </span>
-
-                        <div class="overview-shape">
-                            <img src="{{ asset('assets/images/overview/overview-shape.png') }}" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="overview-card">
-                        <h3>Email Us</h3>
-                        <span>
-                            <a href="/cdn-cgi/l/email-protection#a2cacbc1cdd8c7e2c5cfc3cbce8cc1cdcf"><span class="__cf_email__" data-cfemail="610908020e1b0421060c00080d4f020e0c">[email&#160;protected]</span></a>
-                        </span>
-
-                        <div class="overview-shape">
-                            <img src="{{ asset('assets/images/overview/overview-shape.png') }}" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="overview-card">
-                        <h3>Tech Support</h3>
-                        <span>
-                            <a href="tel:15143125678">+1 (514) 312-5678</a>
-                        </span>
-
-                        <div class="overview-shape">
-                            <img src="{{ asset('assets/images/overview/overview-shape.png') }}" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="overview-card">
-                        <h3>Visit Us</h3>
-                        <span>413 North Las Vegas, NV 89032</span>
-
-                        <div class="overview-shape">
-                            <img src="{{ asset('assets/images/overview/overview-shape.png') }}" alt="image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('website.includes.overview')
     <!-- End Overview Area -->
 
     <!-- Start Blog Area -->
     <div class="blog-area pt-100 pb-75">
         <div class="container">
             <div class="section-title">
-                <span>ARTICLE</span>
-                <h2>Read Our Latest Blog <span class="overlay"></span></h2>
+                <span>{{ __('locale.ARTICLE') }}</span>
+                <h2>{{ __('locale.Read Our Latest Blog') }} <span class="overlay"></span></h2>
             </div>
 
             <div dir="ltr" class="blog-slides owl-carousel owl-theme">
