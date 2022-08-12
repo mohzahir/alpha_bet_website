@@ -40,7 +40,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{ route('projects') }}" class="nav-link {{ request()->routeIs('projects') || request()->routeIs('project.details') ? 'active' : '' }}">
                                     {{ __('locale.Projects') }} 
                                 </a>
                             </li>

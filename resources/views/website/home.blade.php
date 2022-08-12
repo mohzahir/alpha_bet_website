@@ -61,29 +61,65 @@
         <div class="container">
             <div class="features-inner-box">
                 <div class="row justify-content-center">
-                    @if(count($featured_services) > 0)
-                    @foreach($featured_services as $service)
                     <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                         <div class="single-features-card" data-tilt>
                             <div class="features-image" data-tilt>
-                                <a href="{{ route('service.details', ['service' => $service->id]) }}"><img src="{{ asset($service->photo) }}" alt="image"></a>
+                                <a href="services-details.html"><img src="{{ asset('assets/images/features/features-1.png') }}" alt="image"></a>
                             </div>
                             <div class="content">
                                 <h3>
-                                    <a href="{{ route('service.details', ['service' => $service->id]) }}">{{ $locale == 'ar' ? $service->name_ar : $service->name}}</a>
+                                    <a href="services-details.html">Product Design</a>
                                 </h3>
-                                <p>{{ Str::limit($locale == 'ar' ? $service->short_descr_ar : $service->short_descr, 80) }}</p>
+                                <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
                             </div>
                             <div class="hover-content">
                                 <h3>
-                                    <a href="{{ route('service.details', ['service' => $service->id]) }}">{{ $locale == 'ar' ? $service->name_ar : $service->name}}</a>
+                                    <a href="services-details.html">Product Design</a>
                                 </h3>
-                                <a href="{{ route('service.details', ['service' => $service->id]) }}" class="features-btn">{{ __('locale.View More') }}</a>
+                                <a href="services-details.html" class="features-btn">View More</a>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-                    @endif
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                        <div class="single-features-card" data-tilt>
+                            <div class="features-image" data-tilt>
+                                <a href="services-details.html"><img src="{{ asset('assets/images/features/features-2.png') }}" alt="image"></a>
+                            </div>
+                            <div class="content">
+                                <h3>
+                                    <a href="services-details.html">Development</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
+                            </div>
+                            <div class="hover-content">
+                                <h3>
+                                    <a href="services-details.html">Development</a>
+                                </h3>
+                                <a href="services-details.html" class="features-btn">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                        <div class="single-features-card" data-tilt>
+                            <div class="features-image" data-tilt>
+                                <a href="services-details.html"><img src="{{ asset('assets/images/features/features-3.png') }}" alt="image"></a>
+                            </div>
+                            <div class="content">
+                                <h3>
+                                    <a href="services-details.html">Data Analysis</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
+                            </div>
+                            <div class="hover-content">
+                                <h3>
+                                    <a href="services-details.html">Data Analysis</a>
+                                </h3>
+                                <a href="services-details.html" class="features-btn">View More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -344,87 +380,7 @@
     <!-- End Talk Area -->
 
     <!-- Start Projects Area -->
-    <div class="projects-area style-two-area ptb-100">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-md-12">
-                    <div class="projects-section-content" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                        <div class="projects-bg-text">WORK</div>
-                        <span>{{ __('locale.PROJECTS') }}</span>
-                        <h3>{{ __('locale.Our Latest Incredible Clients Project') }} <span class="overlay"></span></h3>
-                        <p>We are technology solutions providing company all over the world doing over 40 years.</p>
-                        <div class="projects-section-btn">
-                            <a href="projects.html" class="default-btn">{{ __('locale.Explore All Projects') }}</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-8 col-md-12">
-                    <div dir="ltr" class="projects-slides-two owl-carousel owl-theme">
-                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
-                            <div class="projects-image">
-                                <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-1.jpg') }}" alt="image"></a>
-                            </div>
-                            <div class="projects-content">
-                                <h3>
-                                    <a href="projects-details.html">3D Animation</a>
-                                </h3>
-                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
-                            </div>
-                        </div>
-
-                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
-                            <div class="projects-image">
-                                <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-2.jpg') }}" alt="image"></a>
-                            </div>
-                            <div class="projects-content">
-                                <h3>
-                                    <a href="projects-details.html">Online Banking Software</a>
-                                </h3>
-                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
-                            </div>
-                        </div>
-
-                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                            <div class="projects-image">
-                                <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-3.jpg') }}" alt="image"></a>
-                            </div>
-                            <div class="projects-content">
-                                <h3>
-                                    <a href="projects-details.html">Cashier Software</a>
-                                </h3>
-                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
-                            </div>
-                        </div>
-
-                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                            <div class="projects-image">
-                                <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-4.jpg') }}" alt="image"></a>
-                            </div>
-                            <div class="projects-content">
-                                <h3>
-                                    <a href="projects-details.html">Analytics Software</a>
-                                </h3>
-                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
-                            </div>
-                        </div>
-
-                        <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
-                            <div class="projects-image">
-                                <a href="projects-details.html"><img src="{{ asset('assets/images/projects/projects-5.jpg') }}" alt="image"></a>
-                            </div>
-                            <div class="projects-content">
-                                <h3>
-                                    <a href="projects-details.html">Messaging App</a>
-                                </h3>
-                                <a href="projects-details.html" class="projects-btn">{{ __('locale.View More') }}</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('website.includes.projects', ['projects' => $projects])
     <!-- End Projects Area -->
 
     <!-- Start Partner Area -->

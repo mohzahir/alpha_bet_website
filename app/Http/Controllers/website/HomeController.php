@@ -13,8 +13,8 @@ class HomeController extends Controller
     {
         return view('website.home', [
             'locale' => app()->getLocale(),
-            'featured_services' => Service::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->take(3)->get(),
-            'services' => Service::where('status', 'active')->where('is_featured', '0')->orderBy('id', 'DESC')->limit(5)->get(),
+            'services' => Service::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->limit(5)->get(),
+            'projects' => project::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->limit(5)->get(),
         ]);
     }
     public function services()
@@ -29,15 +29,16 @@ class HomeController extends Controller
     {
         return view('website.service-details', [
             'locale' => app()->getLocale(),
-            'services' => Service::where('status', 'active')->where('is_featured', '0')->orderBy('id', 'DESC')->get(),
+            'services' => Service::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->get(),
             'service' => $service,
         ]);
     }
     public function projects()
     {
         return view('website.projects', [
+            'services' => Service::where('status', 'active')->has('projects')->orderBy('id', 'DESC')->get(),
             'locale' => app()->getLocale(),
-            'projects' => Service::where('status', 'active')->where('is_featured', '0')->orderBy('id', 'DESC')->get(),
+            'projects' => Project::where('status', 'active')->where('is_featured', '0')->orderBy('id', 'DESC')->get(),
         ]);
     }
     public function projectDetails(project $project)
