@@ -59,5 +59,15 @@ return [
     "Your Sale Through Solutions" => "Your Sale Through Solutions",
     "We Provide the Best Quality" => "We Provide the Best Quality",
     "Service Details" => "Service Details",
+    "Our Latest" => "Our Latest",
+    "Incredible" => "Incredible",
+    "Clients Projects" => "Client's Projects",
+    "Our Projects" => "Our Projects",
+    "PROJECT DETAILS" => "PROJECT DETAILS",
+    "Category" => "Category",
+    "Client" => "Client",
+    "Duration" => "Duration",
+    "Location" => "Location",
+    "Project Details" => "Project Details",
 
 ];

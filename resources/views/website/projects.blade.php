@@ -35,68 +35,26 @@
             </ul>  
 
             <div id="Container" class="row justify-content-center">
-                @if(count($services) > 0)
-                @foreach($services as $service)
-                <div class="col-lg-4 col-md-6 mix {{ Str::slug($service->name) }}">
-                    @foreach($service->projects as $project)
+                @foreach($projects as $index => $project)
+                <div class="col-lg-4 col-md-6 mix  {{ $services_classes }} ">
                     <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                         <div class="projects-image">
                             <a href="{{ route('project.details', ['project' => $project->id]) }}"><img src="{{ asset($project->photo) }}" alt="image"></a>
                         </div>
                         <div class="projects-content">
                             <h3>
-                                <a href="{{ route('project.details', ['project' => $project->id]) }}">{{ $locale == 'ar' ? $project->name : $project->name_ar}}</a>
+                                <a href="{{ route('project.details', ['project' => $project->id]) }}">{{ $locale == 'ar' ? $project->name_ar : $project->name}}</a>
                             </h3>
                             <a href="{{ route('project.details', ['project' => $project->id]) }}" class="projects-btn">{{ __('locale.View More') }}</a>
                         </div>
                     </div>
-                    @endforeach
                 </div>
                 @endforeach
-                @endif
-                <div class="col-lg-4 col-md-6 mix development product-design">
-                    <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
-                        <div class="projects-image">
-                            <a href="projects-details.html"><img src="assets/images/projects-two/projects-3.jpg" alt="image"></a>
-                        </div>
-                        <div class="projects-content">
-                            <h3>
-                                <a href="projects-details.html">Cashier Software</a>
-                            </h3>
-                            <a href="projects-details.html" class="projects-btn">View More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mix web-design mobile product-design">
-                    <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
-                        <div class="projects-image">
-                            <a href="projects-details.html"><img src="assets/images/projects-two/projects-4.jpg" alt="image"></a>
-                        </div>
-                        <div class="projects-content">
-                            <h3>
-                                <a href="projects-details.html">Messaging App</a>
-                            </h3>
-                            <a href="projects-details.html" class="projects-btn">View More</a>
-                        </div>
-                    </div>
-
-                    <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
-                        <div class="projects-image">
-                            <a href="projects-details.html"><img src="assets/images/projects-two/projects-5.jpg" alt="image"></a>
-                        </div>
-                        <div class="projects-content">
-                            <h3>
-                                <a href="projects-details.html">Analytics Software</a>
-                            </h3>
-                            <a href="projects-details.html" class="projects-btn">View More</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
         <div class="projects-bg-shape-1">
-            <img src="assets/images/projects/projects-bg-shape.png" alt="image">
+            <img src="{{ asset('assets/images/projects/projects-bg-shape.png') }}" alt="image">
         </div>
     </div>
     <!-- End Projects Area -->

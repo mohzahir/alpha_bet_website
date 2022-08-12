@@ -59,5 +59,15 @@ return [
     "Your Sale Through Solutions" => "مبيعاتك من خلال الحلول التقنية",
     "We Provide the Best Quality" => "نحن نقدم افضل جودة خدمات",
     "Service Details" => "تفاصيل الخدمة",
+    "Our Latest" => "اخر المشاريع",
+    "Incredible" => "المميزة",
+    "Clients Projects" => " لعملائنا",
+    "Our Projects" => "مشاريعنا",
+    "PROJECT DETAILS" => "تفاصيل المشروع",
+    "Category" => "الفئة",
+    "Client" => "العميل",
+    "Duration" => "الفترة الزمنية",
+    "Location" => "المكان",
+    "Project Details" => "تفاصيل المشروع",
 
 ];

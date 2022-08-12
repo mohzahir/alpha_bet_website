@@ -48,7 +48,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@800&display=swap" rel="stylesheet">
         <style>
-            body, h1, h2, h3, h4, h5, h6, span, p, i, a, button, input, .nav-link{
+            body, h1, h2, h3, h4, h5, h6, span, p, i, a, span, button, input, .nav-link{
                 font-family: 'Tajawal', 'sans-serif' !important;
             }
         </style>

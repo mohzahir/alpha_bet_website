@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\project;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -35,10 +36,16 @@ class HomeController extends Controller
     }
     public function projects()
     {
+        $services = Service::where('status', 'active')->has('projects')->orderBy('id', 'DESC')->get();
+        $services_classes = '';
+        foreach ($services->pluck('name') as $service_name) {
+            $services_classes .= ' ' . Str::slug($service_name);
+        }
         return view('website.projects', [
-            'services' => Service::where('status', 'active')->has('projects')->orderBy('id', 'DESC')->get(),
+            'services' => $services,
+            'services_classes' => $services_classes,
             'locale' => app()->getLocale(),
-            'projects' => Project::where('status', 'active')->where('is_featured', '0')->orderBy('id', 'DESC')->get(),
+            'projects' => Project::where('status', 'active')->orderBy('id', 'DESC')->get(),
         ]);
     }
     public function projectDetails(project $project)

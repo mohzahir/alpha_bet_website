@@ -35,4 +35,8 @@ class project extends Model
     {
         return $this->belongsTo(Client::class);
     }
+    public function images()
+    {
+        return $this->hasMany(ProjectImage::class);
+    }
 }
