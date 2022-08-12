@@ -69,5 +69,6 @@ return [
     "Duration" => "Duration",
     "Location" => "Location",
     "Project Details" => "Project Details",
+    "All" => "All",
 
 ];

@@ -69,5 +69,6 @@ return [
     "Duration" => "الفترة الزمنية",
     "Location" => "المكان",
     "Project Details" => "تفاصيل المشروع",
+    "All" => "الكل",
 
 ];

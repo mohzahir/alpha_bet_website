@@ -26,7 +26,7 @@
             </div>
 
             <ul class="projects-filter-menu"> 
-                <li class="filter" data-filter="all">All</li>
+                <li class="filter" data-filter="all">{{ __('locale.All') }}</li>
                 @if(count($services) > 0)
                 @foreach($services as $service)
                 <li class="filter" data-filter=".{{ Str::slug($service->name) }}">{{ $locale == 'ar' ? $service->name_ar : $service->name }}</li>
