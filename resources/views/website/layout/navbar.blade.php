@@ -35,7 +35,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('services') }}" class="nav-link {{ request()->routeIs('services') ? 'active' : '' }}">
+                                <a href="{{ route('services') }}" class="nav-link {{ request()->routeIs('services') || request()->routeIs('service.details') ? 'active' : '' }}">
                                     {{ __('locale.Services') }} 
                                 </a>
                             </li>

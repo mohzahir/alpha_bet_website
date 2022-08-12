@@ -23,3 +23,5 @@ Route::get('language/{locale}', function ($locale) {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/services/{service}/details', [HomeController::class, 'serviceDetails'])->name('service.details');
+Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
+Route::get('/projects/{project}/details', [HomeController::class, 'projectDetails'])->name('project.details');

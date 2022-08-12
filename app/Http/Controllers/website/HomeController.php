@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\website;
 
 use App\Http\Controllers\Controller;
+use App\Models\project;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,23 @@ class HomeController extends Controller
     public function serviceDetails(Service $service)
     {
         return view('website.service-details', [
+            'locale' => app()->getLocale(),
+            'services' => Service::where('status', 'active')->where('is_featured', '0')->orderBy('id', 'DESC')->get(),
             'service' => $service,
+        ]);
+    }
+    public function projects()
+    {
+        return view('website.projects', [
+            'locale' => app()->getLocale(),
+            'projects' => Service::where('status', 'active')->where('is_featured', '0')->orderBy('id', 'DESC')->get(),
+        ]);
+    }
+    public function projectDetails(project $project)
+    {
+        return view('website.project-details', [
+            'locale' => app()->getLocale(),
+            'project' => $project,
         ]);
     }
 }

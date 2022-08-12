@@ -8,7 +8,7 @@
 
                 <ul>
                     <li>
-                        <a href="index.html">{{ __('locale.Home') }}</a>
+                        <a href="{{ route('home') }}">{{ __('locale.Home') }}</a>
                     </li>
                     <li>{{ __('locale.Our Services') }}</li>
                 </ul>

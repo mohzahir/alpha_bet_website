@@ -58,5 +58,6 @@ return [
     "Increase" => "Increase",
     "Your Sale Through Solutions" => "Your Sale Through Solutions",
     "We Provide the Best Quality" => "We Provide the Best Quality",
+    "Service Details" => "Service Details",
 
 ];

@@ -58,5 +58,6 @@ return [
     "Increase" => "زيادة",
     "Your Sale Through Solutions" => "مبيعاتك من خلال الحلول التقنية",
     "We Provide the Best Quality" => "نحن نقدم افضل جودة خدمات",
+    "Service Details" => "تفاصيل الخدمة",
 
 ];
