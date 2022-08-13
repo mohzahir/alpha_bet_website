@@ -30,7 +30,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{ route('about') }}" class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}">
                                     {{ __('locale.About') }} 
                                 </a>
                             </li>

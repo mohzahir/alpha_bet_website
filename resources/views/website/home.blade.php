@@ -140,7 +140,7 @@
                         <div class="about-bg-text">ABOUT US</div>
                         <span>{{ __('locale.WHO WE ARE') }}</span>
                         <h3>{{ __('locale.about.title') }} <span class="overlay"></span></h3>
-                        <p>We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p>
+                        <p>{{ $locale == 'ar' ? $about->descr_ar : $about->descr }}</p>
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-about-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                             <h3>{{ __('locale.Our Vision') }}</h3>
-                            <p>Lorem ipsum dolor sit amet consetetur sadip scing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyamei erat sed diam voluptua at vero eos et accusam et justo duo.</p>
+                            <p>{{ $locale == 'ar' ? $about->vision_ar : $about->vision }}</p>
                             
                             <div class="about-btn">
                                 <a href="about-style-1.html" class="default-btn">{{ __('locale.Know More About Us') }}</a>
@@ -161,7 +161,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-about-card" data-aos="fade-down" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                             <h3>{{ __('locale.Our Mission') }}</h3>
-                            <p>Lorem ipsum dolor sit amet consetetur sadip scing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyamei erat sed diam voluptua at vero eos et accusam et justo duo.</p>
+                            <p>{{ $locale == 'ar' ? $about->mission_ar : $about->mission }}</p>
                         </div>
                     </div>
 
@@ -384,48 +384,7 @@
     <!-- End Projects Area -->
 
     <!-- Start Partner Area -->
-    <div class="partner-area ptb-100">
-        <div class="container">
-            <div dir="ltr" class="partner-slides owl-carousel owl-theme">
-                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                    <a href="#">
-                        <img src="{{ asset('assets/images/partner/partner-1.png') }}" alt="partner">
-                        <img src="{{ asset('assets/images/partner/partner-hover-1.png') }}" alt="partner">
-                    </a>
-                </div>
-                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                    <a href="#">
-                        <img src="{{ asset('assets/images/partner/partner-2.png') }}" alt="partner">
-                        <img src="{{ asset('assets/images/partner/partner-hover-2.png') }}" alt="partner">
-                    </a>
-                </div>
-                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                    <a href="#">
-                        <img src="{{ asset('assets/images/partner/partner-3.png') }}" alt="partner">
-                        <img src="{{ asset('assets/images/partner/partner-hover-3.png') }}" alt="partner">
-                    </a>
-                </div>
-                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                    <a href="#">
-                        <img src="{{ asset('assets/images/partner/partner-4.png') }}" alt="partner">
-                        <img src="{{ asset('assets/images/partner/partner-hover-4.png') }}" alt="partner">
-                    </a>
-                </div>
-                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                    <a href="#">
-                        <img src="{{ asset('assets/images/partner/partner-5.png') }}" alt="partner">
-                        <img src="{{ asset('assets/images/partner/partner-hover-5.png') }}" alt="partner">
-                    </a>
-                </div>
-                <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="partner-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
-                    <a href="#">
-                        <img src="{{ asset('assets/images/partner/partner-6.png') }}" alt="partner">
-                        <img src="{{ asset('assets/images/partner/partner-hover-6.png') }}" alt="partner">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('website.includes.partner')
     <!-- End Partner Area -->
 
     <!-- Start Team Area -->

@@ -25,3 +25,4 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/services/{service}/details', [HomeController::class, 'serviceDetails'])->name('service.details');
 Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
 Route::get('/projects/{project}/details', [HomeController::class, 'projectDetails'])->name('project.details');
+Route::get('/about', [HomeController::class, 'about'])->name('about');

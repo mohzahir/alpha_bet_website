@@ -16,8 +16,8 @@ class ProjectSeeder extends Seeder
     {
         project::insert([
             [
-                'service_id' => '1',
-                'client_id' => '1',
+                'service_id' => 1,
+                'client_id' => 1,
                 'name' => 'OT Mobile Application',
                 'name_ar' => 'تطبيق التجارة الالكترونية',
                 'start_date' => '2020-02-01',
@@ -34,7 +34,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'service_id' => '2',
-                'client_id' => '1',
+                'client_id' => 1,
                 'name' => 'Alpha beta Websit ',
                 'name_ar' => 'مقع شركة الفا بيتا الالكتروني',
                 'start_date' => '2020-02-01',
@@ -51,7 +51,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'service_id' => '1',
-                'client_id' => '1',
+                'client_id' => 1,
                 'name' => 'traffic management system',
                 'name_ar' => 'نظام الكتروني لادارة المخالفات المرورية',
                 'start_date' => '2020-02-01',
@@ -68,7 +68,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'service_id' => '3',
-                'client_id' => '1',
+                'client_id' => 1,
                 'name' => 'Resturant management system',
                 'name_ar' => 'نظام الكتروني لادارة المطاعم',
                 'start_date' => '2020-02-01',
