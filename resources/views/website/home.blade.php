@@ -68,15 +68,15 @@
                             </div>
                             <div class="content">
                                 <h3>
-                                    <a href="services-details.html">Product Design</a>
+                                    <a href="services-details.html">{{ __('locale.Branding Strategy') }}</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
                             </div>
                             <div class="hover-content">
                                 <h3>
-                                    <a href="services-details.html">Product Design</a>
+                                    <a href="services-details.html">{{ __('locale.Branding Strategy') }}</a>
                                 </h3>
-                                <a href="services-details.html" class="features-btn">View More</a>
+                                <a href="services-details.html" class="features-btn">{{__('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
@@ -88,15 +88,15 @@
                             </div>
                             <div class="content">
                                 <h3>
-                                    <a href="services-details.html">Development</a>
+                                    <a href="services-details.html">{{ __('locale.Mobile Apps') }}</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
                             </div>
                             <div class="hover-content">
                                 <h3>
-                                    <a href="services-details.html">Development</a>
+                                    <a href="services-details.html">{{ __('locale.Mobile Apps') }}</a>
                                 </h3>
-                                <a href="services-details.html" class="features-btn">View More</a>
+                                <a href="services-details.html" class="features-btn">{{__('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
@@ -108,15 +108,15 @@
                             </div>
                             <div class="content">
                                 <h3>
-                                    <a href="services-details.html">Data Analysis</a>
+                                    <a href="services-details.html">{{ __('locale.Graphic Design') }}</a>
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
                             </div>
                             <div class="hover-content">
                                 <h3>
-                                    <a href="services-details.html">Data Analysis</a>
+                                    <a href="services-details.html">{{ __('locale.Graphic Design') }}</a>
                                 </h3>
-                                <a href="services-details.html" class="features-btn">View More</a>
+                                <a href="services-details.html" class="features-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>

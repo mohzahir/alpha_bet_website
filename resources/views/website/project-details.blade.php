@@ -39,7 +39,7 @@
                         <div class="col-lg-5 col-md-6">
                             <div class="projects-info-content">
                                 <span>{{ __('locale.PROJECT DETAILS') }}</span>
-                                <h3>Messaging App <span class="overlay"></span></h3>
+                                <h3>{{ $locale == 'ar' ? $project->name_ar : $project->name }} <span class="overlay"></span></h3>
 
                                 <ul class="info-list">
                                     <li><span>{{ __('locale.Category') }}:</span> {{ $locale == 'ar' ? $project->service->name_ar : $project->service->name }}</li>

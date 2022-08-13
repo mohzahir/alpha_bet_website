@@ -70,5 +70,9 @@ return [
     "Location" => "المكان",
     "Project Details" => "تفاصيل المشروع",
     "All" => "الكل",
+    "Branding Strategy" => "استرايجيات التسويق",
+    "Graphic Design" => "التصميم الجرافيكي",
+    "Mobile Apps" => "تطبيقات الموبايل",
+    "Search Optimization" => "تحسين محركات البحث",
 
 ];

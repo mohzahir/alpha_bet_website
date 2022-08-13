@@ -70,5 +70,10 @@ return [
     "Location" => "Location",
     "Project Details" => "Project Details",
     "All" => "All",
+    "Mobile Apps" => "Mobile Apps",
+    "Branding Strategy" => "Branding Strategy",
+    "Graphic Design" => "Graphic Design",
+    "Mobile Apps" => "Mobile Apps",
+    "Search Optimization" => "Search Optimization",
 
 ];

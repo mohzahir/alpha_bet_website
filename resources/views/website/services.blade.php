@@ -27,23 +27,63 @@
             </div>
 
             <div class="row">
-                @if(count($featured_services) > 0)
-                @foreach($featured_services as $service)
+                
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-choose-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                         <div class="choose-image" data-tilt>
-                            <a href="{{ route('service.details', ['service' => $service->id]) }}"><img style="width: 140px; height: 150px" src="{{ asset($service->photo) }}" alt="image"></a>
+                            <a href="#"><img src="{{ asset('assets/images/choose/choose-1.png') }}" alt="image"></a>
                         </div>
                         <div class="choose-content">
                             <h3>
-                                <a href="{{ route('service.details', ['service' => $service->id]) }}">{{ $locale == 'ar' ? $service->name_ar : $service->name}}</a>
+                                <a href="#">{{ __('locale.Mobile Apps') }}</a>
                             </h3>
-                            <p>{{ Str::limit($locale == 'ar' ? $service->short_descr_ar : $service->short_descr, 80) }}</p>
+                            <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
                         </div>
                     </div>
                 </div>
-                @endforeach
-                @endif
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-choose-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                        <div class="choose-image" data-tilt>
+                            <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-2.png') }}" alt="image"></a>
+                        </div>
+                        <div class="choose-content">
+                            <h3>
+                                <a href="services-details.html">{{ __('locale.Branding Strategy') }}</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-choose-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                        <div class="choose-image" data-tilt>
+                            <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-3.png') }}" alt="image"></a>
+                        </div>
+                        <div class="choose-content">
+                            <h3>
+                                <a href="services-details.html">{{ __('locale.Graphic Design') }}</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-choose-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                        <div class="choose-image" data-tilt>
+                            <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-4.png') }}" alt="image"></a>
+                        </div>
+                        <div class="choose-content">
+                            <h3>
+                                <a href="services-details.html">{{ __('locale.Search Optimization') }}</a>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                        </div>
+                    </div>
+                </div>
+                
 
             </div>
         </div>

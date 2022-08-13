@@ -22,8 +22,8 @@ class HomeController extends Controller
     {
         return view('website.services', [
             'locale' => app()->getLocale(),
-            'featured_services' => Service::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->take(4)->get(),
-            'services' => Service::where('status', 'active')->where('is_featured', '0')->orderBy('id', 'DESC')->get(),
+            // 'featured_services' => Service::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->take(4)->get(),
+            'services' => Service::where('status', 'active')->orderBy('id', 'DESC')->get(),
         ]);
     }
     public function serviceDetails(Service $service)
