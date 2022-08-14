@@ -64,4 +64,18 @@ class HomeController extends Controller
             'about' => About::find(1),
         ]);
     }
+    public function products()
+    {
+        // $services = Service::where('status', 'active')->has('products')->orderBy('id', 'DESC')->get();
+        // $services_classes = '';
+        // foreach ($services->pluck('name') as $service_name) {
+        //     $services_classes .= ' ' . Str::slug($service_name);
+        // }
+        return view('website.products', [
+            // 'services' => $services,
+            // 'services_classes' => $services_classes,
+            'locale' => app()->getLocale(),
+            // 'products' => Project::where('status', 'active')->orderBy('id', 'DESC')->get(),
+        ]);
+    }
 }

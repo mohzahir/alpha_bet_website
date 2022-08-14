@@ -75,5 +75,7 @@ return [
     "Graphic Design" => "Graphic Design",
     "Mobile Apps" => "Mobile Apps",
     "Search Optimization" => "Search Optimization",
-
+    "Explore More" => "Explore More",
+    "We Have A Set Of Skill With High Quality" => "We Have A Set Of Skill With High Quality",
+    "Why Choose Us" => "Why Choose Us",
 ];

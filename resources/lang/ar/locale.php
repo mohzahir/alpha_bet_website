@@ -74,5 +74,9 @@ return [
     "Graphic Design" => "التصميم الجرافيكي",
     "Mobile Apps" => "تطبيقات الموبايل",
     "Search Optimization" => "تحسين محركات البحث",
+    "We Have A Set Of Skill With High Quality" => "نمتلك مجموعة من الخبرات مع الجودة العالية",
+    "Explore More" => "إكتشف المزيد",
+    "Why Choose Us" => "لماذا نحن ؟",
+
 
 ];
