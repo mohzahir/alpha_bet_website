@@ -35,4 +35,5 @@ Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     // Route::get('/services', [ServiceController::class, 'index'])->name('dashboard');
     Route::resource('service', ServiceController::class);
+    Route::get('/service/{service}/change-status', [ServiceController::class, 'changeStatus'])->name('service.change.status');
 });

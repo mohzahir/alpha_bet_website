@@ -15,59 +15,82 @@
     
   </x-slot>
 
+  @include('notification.flash-message');
+
   <div class="card pd-25">
     <!-- <h6 class="br-section-label">Basic Table</h6>
     <p class="br-section-text">Using the most basic table markup.</p> -->
-      <a href="{{ route('service.create') }}" class="btn btn-success">إضافة خدمة</a>
+      <a href="{{ route('service.create') }}" class="btn btn-teal">إضافة خدمة</a>
 
     <div class=" table-responsive">
       <table class="table display responsive nowrap dataTable no-footer dtr-inline collapsed">
         <thead class="">
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Salary</th>
+            <th>الصورة</th>
+            <th>الاسم العربي</th>
+            <th>الاسم الانجليزي</th>
+            <th>الحالة</th>
+            <th>الخدمة مميزة</th>
+            <th>التحكم</th>
           </tr>
         </thead>
         <tbody>
+          @if(count($services) > 0)
+          @foreach($services as $index => $service)
           <tr>
-            <th scope="row">1</th>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>$320,800</td>
+            <th scope="row">{{ $service->id }}</th>
+            <td><img style="width: 50px;height: 50px;" src="{{ asset($service->photo) }}" class="img-fluid img-thumbnail" alt=""></td>
+            <td>{{ $service->name_ar }}</td>
+            <td>{{ $service->name }}</td>
+            <!-- <td>{{ $service->short_descr_ar }}</td>
+            <td>{{ $service->short_descr }}</td>
+            <td>{{ $service->descr_ar }}</td>
+            <td>{{ $service->descr }}</td> -->
+            <td>
+              @if($service->status == 'active')
+              <a href="{{ route('service.change.status', ['service' => $service->id, 'status' => 'inactive']) }}" class="btn btn-success btn-icon mg-b-10" title="إخقاء"><div><i class="icon ion-ios-eye-outline"></i></div></a>
+              @else
+              <a href="{{ route('service.change.status', ['service' => $service->id, 'status' => 'active']) }}" class="btn btn-danger btn-icon mg-b-10" title="إظهار"><div><i class="icon ion-ios-eye-outline"></i></div></a>
+              @endif
+            </td>
+            <td>
+              @if($service->is_featured)
+              <div class="text-center tx-bold tx-success">
+                <i class="icon ion-ios-checkmark-outline tx-22"></i>
+              </div>
+              @else
+              <div class="text-center tx-bold tx-danger">
+                <i class="icon ion-ios-close-outline tx-22"></i>
+              </div>
+              @endif
+            </td>
+            <td>
+              <a href="{{ route('service.show', ['service' => $service->id]) }}" class="btn btn-warning btn-icon mg-b-10" title="التفاصيل"><div><i class="icon ion-ios-information-outline"></i></div></a>
+              <a href="{{ route('service.edit', ['service' => $service->id]) }}" class="btn btn-info btn-icon mg-b-10" title="تعديل"><div><i class="icon ion-android-create"></i></div></a>
+              <button onclick="x = confirm('هل انت متأكد ؟'); if(x){ $('.form-delete{{ $index }}').submit() }" class="btn btn-danger btn-icon mg-b-10" title="حذف"><div><i class="icon ion-android-remove-circle"></i></div></button>
+              <form class="form-delete{{ $index }}" method="post" action="{{ route('service.destroy', ['service' => $service->id]) }}">
+                @csrf
+                @method('DELETE')
+              </form>
+            </td>
           </tr>
+          @endforeach
+          @else
           <tr>
-            <th scope="row">2</th>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>$170,750</td>
+            <td colspan="10">لا يوجد بيانات لعرضها</td>
           </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Ashton Cox</td>
-            <td>Junior Technical Author</td>
-            <td>$86,000</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>$433,060</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Airi Satou</td>
-            <td>Accountant</td>
-            <td>$162,700</td>
-          </tr>
+          @endif
         </tbody>
         <tfoot class="">
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Salary</th>
+            <th>الصورة</th>
+            <th>الاسم العربي</th>
+            <th>الاسم الانجليزي</th>
+            <th>الحالة</th>
+            <th>الخدمة مميزة</th>
+            <th>التحكم</th>
           </tr>
         </tfoot>
       </table>

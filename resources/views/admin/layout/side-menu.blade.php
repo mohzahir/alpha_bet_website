@@ -9,7 +9,7 @@
         </a><!-- br-menu-link -->
       </li><!-- br-menu-item -->
       <li class="br-menu-item">
-        <a href="#" class="br-menu-link with-sub {{ request()->is('admin/service/*') ? 'active' : '' }}">
+        <a href="#" class="br-menu-link with-sub {{ request()->is('admin/service/*') || request()->routeIs('service.index') ? 'active' : '' }}">
           <i class="menu-item-icon icon ion-ios-star-outline tx-22"></i>
           <span class="menu-item-label">الخدمات</span>
         </a><!-- br-menu-link -->
