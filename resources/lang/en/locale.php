@@ -78,4 +78,6 @@ return [
     "Explore More" => "Explore More",
     "We Have A Set Of Skill With High Quality" => "We Have A Set Of Skill With High Quality",
     "Why Choose Us" => "Why Choose Us",
+    "Our Products" => "Our Products",
+
 ];

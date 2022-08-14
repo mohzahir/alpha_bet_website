@@ -4,13 +4,13 @@
     <div class="page-banner-area bg-2 jarallax" data-jarallax='{"speed": 0.3}'>
         <div class="container">
             <div class="page-banner-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
-                <h2>{{ __('locale.Our Projects') }}</h2>
+                <h2>{{ __('locale.Our Products') }}</h2>
 
                 <ul>
                     <li>
                         <a href="{{ route('home') }}">{{ __('locale.Home') }}</a>
                     </li>
-                    <li>{{ __('locale.Our Projects') }}</li>
+                    <li>{{ __('locale.Our Products') }}</li>
                 </ul>
             </div>
         </div>
@@ -21,8 +21,8 @@
     <div class="blog-area pt-100 pb-100">
         <div class="container">
             <div class="section-title">
-                <span>ARTICLE</span>
-                <h2>Read Our Blog To Get All Recent Tech <b>News</b> <span class="overlay"></span></h2>
+                <span>{{ __('locale.Our Products') }}</span>
+                <h2> List Of Featured Products We Maid With <b>Love</b> <span class="overlay"></span></h2>
             </div>
 
             <!-- <div class="blog-grid-sorting row align-items-center">
@@ -48,7 +48,7 @@
             
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12">
-                    <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    <div class="p-3" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="" style="height: 170px;">
@@ -70,7 +70,7 @@
                 </div>
                 
                 <div class="col-lg-12 col-md-12">
-                    <div class="blog-card" data-aos="fade-up" data-aos-delay="890" data-aos-duration="900" data-aos-once="true">
+                    <div class="p-3" data-aos="fade-up" data-aos-delay="890" data-aos-duration="900" data-aos-once="true">
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="" style="height: 170px;">
@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12">
-                    <div class="blog-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                    <div class="p-3" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="" style="height: 170px;">
@@ -114,7 +114,7 @@
                 </div>
                 
                 <div class="col-lg-12 col-md-12">
-                    <div class="blog-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+                    <div class="p-3" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="" style="height: 170px;">
@@ -136,7 +136,7 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12">
-                    <div class="blog-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+                    <div class="p-3" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="" style="height: 170px;">
@@ -158,7 +158,7 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12">
-                    <div class="blog-card" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
+                    <div class="p-3" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900" data-aos-once="true">
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="" style="height: 170px;">

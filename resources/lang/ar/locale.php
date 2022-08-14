@@ -77,6 +77,7 @@ return [
     "We Have A Set Of Skill With High Quality" => "نمتلك مجموعة من الخبرات مع الجودة العالية",
     "Explore More" => "إكتشف المزيد",
     "Why Choose Us" => "لماذا نحن ؟",
+    "Our Products" => "منتجاتنا",
 
 
 ];
