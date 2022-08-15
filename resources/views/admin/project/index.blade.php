@@ -7,7 +7,7 @@
       </nav>
   </x-slot>
   <x-slot name="title">
-    <i class="icon ion-ios-home-outline"></i>
+    <i class="icon ion-stats-bars"></i>
     <div>
       <h4>إدارة المشاريع</h4>
       <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>

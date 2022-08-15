@@ -20,7 +20,7 @@
       </li><!-- br-menu-item -->
       <li class="br-menu-item">
         <a href="#" class="br-menu-link with-sub {{ request()->is('admin/project/*') || request()->routeIs('project.index') ? 'active' : '' }}">
-          <i class="menu-item-icon icon ion-ios-star-outline tx-22"></i>
+          <i class="menu-item-icon icon ion-stats-bars tx-22"></i>
           <span class="menu-item-label">المشاريع</span>
         </a><!-- br-menu-link -->
         <ul class="br-menu-sub">
