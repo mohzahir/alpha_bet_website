@@ -26,6 +26,12 @@ class AddProjectRequest extends FormRequest
         if (request()->isMethod('patch')) {
             // edit
             return [
+                'service_id' => 'required|exists:services,id',
+                'client_id' => 'required|exists:clients,id',
+                'start_date' => 'required|date',
+                'finish_date' => 'required|date',
+                'location' => 'required|string|min:3',
+                'location_ar' => 'required|string|min:3',
                 'name' => 'required|min:3|string',
                 'name_ar' => 'required|min:3|string',
                 'short_descr' => 'required|min:5|string',
@@ -39,6 +45,12 @@ class AddProjectRequest extends FormRequest
         } else {
             //add
             return [
+                'service_id' => 'required|exists:services,id',
+                'client_id' => 'required|exists:clients,id',
+                'start_date' => 'required|date',
+                'finish_date' => 'required|date',
+                'location' => 'required|string|min:3',
+                'location_ar' => 'required|string|min:3',
                 'name' => 'required|min:3|string',
                 'name_ar' => 'required|min:3|string',
                 'short_descr' => 'required|min:5|string',

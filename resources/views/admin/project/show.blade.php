@@ -45,16 +45,47 @@
                             </div>
                         </div><!-- col-4 -->
                         <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label">الخدمة</label>
+                                <input readonly class="form-control" type="text" value="{{ $project->service->name_ar }}" placeholder="ادخل عنوان المشروع بالعربي">
+                            </div>
+                        </div><!-- col-4 -->
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label">العميل</label>
+                                <input readonly class="form-control" type="text" value="{{ $project->client->name_ar }}" placeholder="ادخل عنوان المشروع بالانجليزي">
+                            </div>
+                        </div><!-- col-4 -->
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label">تاريخ البداية</label>
+                                <input readonly class="form-control" type="text" value="{{ $project->start_date }}" placeholder="ادخل عنوان المشروع بالعربي">
+                            </div>
+                        </div><!-- col-4 -->
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label">تاريخ النهاية</label>
+                                <input readonly class="form-control" type="text" value="{{ $project->end_date }}" placeholder="ادخل عنوان المشروع بالانجليزي">
+                            </div>
+                        </div><!-- col-4 -->
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label">المكان</label>
+                                <input readonly class="form-control" type="text" value="{{ $project->location_ar }}" placeholder="ادخل عنوان المشروع بالعربي">
+                            </div>
+                        </div><!-- col-4 -->
+                        
+                        <div class="col-lg-6 mg-t-20 mg-lg-t-20">
+                            <label class="ckbox">
+                                <input readonly disabled type="checkbox" name="is_featured" {{ $project->is_featured ? 'checked' : ''}} value="1"><span>المشروع مميزة ؟ </span>
+                            </label>
+                        </div><!-- col-8 -->
+                        <div class="col-lg-6">
                             <div class="form-groub">
                                 <label for="">صورة المشروع</label>
                                 <img style="width: 200px;height: 200px;display: block" src="{{ asset($project->photo) }}" class="img-fluid img-thumbnail" alt="">
                             </div>
                         </div><!-- col-4 -->
-                        <div class="col-lg-3 mg-t-20 mg-lg-t-0">
-                            <label class="ckbox">
-                                <input readonly disabled type="checkbox" name="is_featured" {{ $project->is_featured ? 'checked' : ''}} value="1"><span>المشروع مميزة ؟ </span>
-                            </label>
-                        </div><!-- col-8 -->
                     </div>
                 </div><!-- tab-pane -->
 
@@ -64,25 +95,25 @@
                         <div class="col-lg-6">
                             <div class="form-group mg-b-10-force">
                                 <label class="form-control-label">الوصف القصير بالعربي</label>
-                                <textarea readonly class="form-control" type="text" name="short_descr_ar" placeholder="ادخل الوصف القصير بالعربي">{!! $project->short_descr_ar !!}</textarea>
+                                <textarea readonly class="form-control" type="text" rows="3" name="short_descr_ar" placeholder="ادخل الوصف القصير بالعربي">{!! $project->short_descr_ar !!}</textarea>
                             </div>
                         </div><!-- col-8 -->
                         <div class="col-lg-6">
                             <div class="form-group mg-b-10-force">
                                 <label class="form-control-label">الوصف القصير بالانجليزي</label>
-                                <textarea readonly class="form-control" type="text" name="short_descr" placeholder="ادخل الوصف القصير بالانجليزي">{!! $project->short_descr !!}</textarea>
+                                <textarea readonly class="form-control" type="text" rows="3" name="short_descr" placeholder="ادخل الوصف القصير بالانجليزي">{!! $project->short_descr !!}</textarea>
                             </div>
                         </div><!-- col-8 -->
                         <div class="col-lg-12">
                             <div class="form-group mg-b-10-force">
                                 <label class="form-control-label">الوصف الكامل بالعربي</label>
-                                <textarea readonly class="form-control summernote" type="text" name="descr_ar" placeholder="ادخل الوصف الكامل بالعربي">{!! $project->descr_ar !!}</textarea>
+                                <textarea readonly class="form-control summernote" type="text" rows="10" name="descr_ar" placeholder="ادخل الوصف الكامل بالعربي">{!! $project->descr_ar !!}</textarea>
                             </div>
                         </div><!-- col-8 -->
                         <div class="col-lg-12">
                             <div class="form-group mg-b-10-force">
                                 <label class="form-control-label">الوصف الكامل بالانجليزي</label>
-                                <textarea readonly class="form-control summernote" type="text" name="descr" placeholder="ادخل الوصف الكامل بالانجليزي">{!! $project->descr !!}</textarea>
+                                <textarea readonly class="form-control summernote" type="text" rows="10" name="descr" placeholder="ادخل الوصف الكامل بالانجليزي">{!! $project->descr !!}</textarea>
                             </div>
                         </div><!-- col-8 -->
                     </div>

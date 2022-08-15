@@ -64,25 +64,25 @@
                         <div class="col-lg-6">
                             <div class="form-group mg-b-10-force">
                                 <label class="form-control-label">الوصف القصير بالعربي</label>
-                                <textarea readonly class="form-control" type="text" name="short_descr_ar" placeholder="ادخل الوصف القصير بالعربي">{!! $service->short_descr_ar !!}</textarea>
+                                <textarea readonly class="form-control" type="text" rows="3" name="short_descr_ar" placeholder="ادخل الوصف القصير بالعربي">{!! $service->short_descr_ar !!}</textarea>
                             </div>
                         </div><!-- col-8 -->
                         <div class="col-lg-6">
                             <div class="form-group mg-b-10-force">
                                 <label class="form-control-label">الوصف القصير بالانجليزي</label>
-                                <textarea readonly class="form-control" type="text" name="short_descr" placeholder="ادخل الوصف القصير بالانجليزي">{!! $service->short_descr !!}</textarea>
+                                <textarea readonly class="form-control" type="text" rows="3" name="short_descr" placeholder="ادخل الوصف القصير بالانجليزي">{!! $service->short_descr !!}</textarea>
                             </div>
                         </div><!-- col-8 -->
                         <div class="col-lg-12">
                             <div class="form-group mg-b-10-force">
                                 <label class="form-control-label">الوصف الكامل بالعربي</label>
-                                <textarea readonly class="form-control summernote" type="text" name="descr_ar" placeholder="ادخل الوصف الكامل بالعربي">{!! $service->descr_ar !!}</textarea>
+                                <textarea readonly class="form-control summernote" rows="10" type="text" name="descr_ar" placeholder="ادخل الوصف الكامل بالعربي">{!! $service->descr_ar !!}</textarea>
                             </div>
                         </div><!-- col-8 -->
                         <div class="col-lg-12">
                             <div class="form-group mg-b-10-force">
                                 <label class="form-control-label">الوصف الكامل بالانجليزي</label>
-                                <textarea readonly class="form-control summernote" type="text" name="descr" placeholder="ادخل الوصف الكامل بالانجليزي">{!! $service->descr !!}</textarea>
+                                <textarea readonly class="form-control summernote" rows="10" type="text" name="descr" placeholder="ادخل الوصف الكامل بالانجليزي">{!! $service->descr !!}</textarea>
                             </div>
                         </div><!-- col-8 -->
                     </div>

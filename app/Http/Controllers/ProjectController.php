@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AddProjectRequest;
+use App\Models\Client;
 use App\Models\project;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -26,7 +29,10 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.project.create');
+        return view('admin.project.create', [
+            'services' => Service::all(),
+            'clients' => Client::all(),
+        ]);
     }
 
     /**
@@ -40,6 +46,12 @@ class ProjectController extends Controller
         // dd($request->all());
         $photo = $request->file('photo')->store('files', 'public_folder');
         project::create([
+            'service_id' => $request->service_id,
+            'client_id' => $request->client_id,
+            'start_date' => $request->start_date,
+            'finish_date' => $request->finish_date,
+            'location' => $request->location,
+            'location_ar' => $request->location_ar,
             'name' => $request->name,
             'name_ar' => $request->name_ar,
             'descr' => $request->descr,
@@ -49,7 +61,7 @@ class ProjectController extends Controller
             'is_featured' => $request->is_featured ?? 0,
             'photo' => $photo,
         ]);
-        return redirect()->route('project.index')->with('success', 'تمت اضافة الخدمة بنجاح');
+        return redirect()->route('project.index')->with('success', 'تمت اضافة المشروع بنجاح');
     }
 
     /**
@@ -101,7 +113,7 @@ class ProjectController extends Controller
             'is_featured' => $request->is_featured ?? 0,
             'photo' => $photo,
         ]);
-        return redirect()->route('project.index')->with('success', 'تم تعديل الخدمة بنجاح');
+        return redirect()->route('project.index')->with('success', 'تم تعديل المشروع بنجاح');
     }
 
     /**
@@ -112,11 +124,8 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        if (count($project->projects) > 0) {
-            return redirect()->route('project.index')->with('warning', 'هذه الخدمة لديها مشاريع تابعة لها ولا يمكن حذفها');
-        }
         $project->delete();
-        return redirect()->route('project.index')->with('success', 'تم حذف الخدمة بنجاح');
+        return redirect()->route('project.index')->with('success', 'تم حذف المشروع بنجاح');
     }
 
     public function changeStatus(Request $request, Project $project)
