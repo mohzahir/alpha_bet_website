@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\website\HomeController;
@@ -33,7 +34,8 @@ Route::get('/products', [HomeController::class, 'products'])->name('products');
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    // Route::get('/services', [ServiceController::class, 'index'])->name('dashboard');
     Route::resource('service', ServiceController::class);
     Route::get('/service/{service}/change-status', [ServiceController::class, 'changeStatus'])->name('service.change.status');
+    Route::resource('project', ProjectController::class);
+    Route::get('/project/{project}/change-status', [ProjectController::class, 'changeStatus'])->name('project.change.status');
 });

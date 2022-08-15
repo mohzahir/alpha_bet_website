@@ -18,6 +18,16 @@
           <li class="sub-item"><a href="{{ route('service.create') }}" class="sub-link {{ request()->routeIs('service.create') ? 'active' : '' }}">إضافة خدمة</a></li>
         </ul>
       </li><!-- br-menu-item -->
+      <li class="br-menu-item">
+        <a href="#" class="br-menu-link with-sub {{ request()->is('admin/project/*') || request()->routeIs('project.index') ? 'active' : '' }}">
+          <i class="menu-item-icon icon ion-ios-star-outline tx-22"></i>
+          <span class="menu-item-label">المشاريع</span>
+        </a><!-- br-menu-link -->
+        <ul class="br-menu-sub">
+          <li class="sub-item"><a href="{{ route('project.index') }}" class="sub-link {{ request()->routeIs('project.index') ? 'active' : '' }}">عرض المشاريع</a></li>
+          <li class="sub-item"><a href="{{ route('project.create') }}" class="sub-link {{ request()->routeIs('project.create') ? 'active' : '' }}">إضافة مشروع</a></li>
+        </ul>
+      </li><!-- br-menu-item -->
       
     </ul><!-- br-sideleft-menu -->
 

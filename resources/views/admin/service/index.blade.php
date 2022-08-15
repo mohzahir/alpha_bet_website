@@ -7,10 +7,13 @@
       </nav>
   </x-slot>
   <x-slot name="title">
-    <i class="icon ion-ios-home-outline"></i>
+    <i class="icon ion-ios-star-outline"></i>
     <div>
       <h4>إدارة الخدمات</h4>
       <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>
+    </div>
+    <div class="text-left w-100">
+      <a href="{{ route('service.create') }}" class="btn btn-teal btn-icon rounded-circle" title="إضافة"> <div><i class="icon ion-ios-plus-outline" style="font-size: 25px; color: #fff"></i></div></a>
     </div>
     
   </x-slot>
@@ -18,9 +21,6 @@
   @include('notification.flash-message');
 
   <div class="card pd-25">
-    <!-- <h6 class="br-section-label">Basic Table</h6>
-    <p class="br-section-text">Using the most basic table markup.</p> -->
-      <a href="{{ route('service.create') }}" class="btn btn-teal">إضافة خدمة</a>
 
     <div class=" table-responsive">
       <table class="table display responsive nowrap dataTable no-footer dtr-inline collapsed">
@@ -43,15 +43,11 @@
             <td><img style="width: 50px;height: 50px;" src="{{ asset($service->photo) }}" class="img-fluid img-thumbnail" alt=""></td>
             <td>{{ $service->name_ar }}</td>
             <td>{{ $service->name }}</td>
-            <!-- <td>{{ $service->short_descr_ar }}</td>
-            <td>{{ $service->short_descr }}</td>
-            <td>{{ $service->descr_ar }}</td>
-            <td>{{ $service->descr }}</td> -->
             <td>
               @if($service->status == 'active')
-              <a href="{{ route('service.change.status', ['service' => $service->id, 'status' => 'inactive']) }}" class="btn btn-success btn-icon mg-b-10" title="إخقاء"><div><i class="icon ion-ios-eye-outline"></i></div></a>
+              <a href="{{ route('service.change.status', ['service' => $service->id, 'status' => 'inactive']) }}" class="btn btn-success btn-icon mg-b-10" title="إخقاء"><div><i class="icon ion-ios-eye-outline tx-22"></i></div></a>
               @else
-              <a href="{{ route('service.change.status', ['service' => $service->id, 'status' => 'active']) }}" class="btn btn-danger btn-icon mg-b-10" title="إظهار"><div><i class="icon ion-ios-eye-outline"></i></div></a>
+              <a href="{{ route('service.change.status', ['service' => $service->id, 'status' => 'active']) }}" class="btn btn-danger btn-icon mg-b-10" title="إظهار"><div><i class="icon ion-ios-eye-outline tx-22"></i></div></a>
               @endif
             </td>
             <td>
@@ -66,9 +62,11 @@
               @endif
             </td>
             <td>
-              <a href="{{ route('service.show', ['service' => $service->id]) }}" class="btn btn-warning btn-icon mg-b-10" title="التفاصيل"><div><i class="icon ion-ios-information-outline"></i></div></a>
-              <a href="{{ route('service.edit', ['service' => $service->id]) }}" class="btn btn-info btn-icon mg-b-10" title="تعديل"><div><i class="icon ion-android-create"></i></div></a>
-              <button onclick="x = confirm('هل انت متأكد ؟'); if(x){ $('.form-delete{{ $index }}').submit() }" class="btn btn-danger btn-icon mg-b-10" title="حذف"><div><i class="icon ion-android-remove-circle"></i></div></button>
+              <div style="display: flex;justify-content: space-evenly;">
+                <a href="{{ route('service.show', ['service' => $service->id]) }}" class="btn btn-warning btn-icon " title="التفاصيل"><div><i class="icon ion-ios-information-outline tx-20"></i></div></a>
+                <a href="{{ route('service.edit', ['service' => $service->id]) }}" class="btn btn-info btn-icon " title="تعديل"><div><i class="icon ion-android-create tx-20"></i></div></a>
+                <button onclick="x = confirm('هل انت متأكد ؟'); if(x){ $('.form-delete{{ $index }}').submit() }" class="btn btn-danger btn-icon" title="حذف"><div><i class="icon ion-android-remove-circle tx-20"></i></div></button>
+              </div>
               <form class="form-delete{{ $index }}" method="post" action="{{ route('service.destroy', ['service' => $service->id]) }}">
                 @csrf
                 @method('DELETE')
