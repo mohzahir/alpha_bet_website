@@ -60,6 +60,7 @@ class AddProjectRequest extends FormRequest
                 'is_featured' => 'nullable|in:0,1',
                 'status' => 'nullable',
                 'photo' => 'required|mimes:jpg,png,jpeg,gif,svg',
+                'project_imgs' => 'required',
             ];
         }
     }

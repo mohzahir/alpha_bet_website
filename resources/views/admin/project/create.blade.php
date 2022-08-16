@@ -3,6 +3,12 @@
 
   @push('links')
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+  <!-- default icons used in the plugin are from Bootstrap 5.x icon library (which can be enabled by loading CSS below) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css" crossorigin="anonymous">
+  <!-- the fileinput plugin styling CSS file -->
+  <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+  <!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
+  <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css">
   @endpush
 
   <x-slot name="header">
@@ -31,6 +37,9 @@
       <li class="nav-item">
         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#descr-info" role="tab" aria-controls="profile" aria-selected="false">البيانات الوصفية</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" id="images" data-toggle="tab" href="#project-imgs" role="tab" aria-controls="profile" aria-selected="false">صور المشروع</a>
+      </li>
     </ul>
     <form action="{{ route('project.store') }}" method="post" enctype="multipart/form-data">
       @csrf
@@ -53,9 +62,9 @@
               <div class="col-lg-6">
                 <div class="form-group">
                   <label class="form-control-label">الخدمة <span class="tx-danger">*</span></label>
-                  <select class="form-control" type="text" name="service_id" value="{{ old('service_id') }}" placeholder="ادخل عنوان المشروع بالعربي">
+                  <select class="form-control" type="text" name="service_id">
                     @foreach($services as $service)
-                    <option {{ old('service_id') == $service->id ? 'checked' : ''}} value="{{ $service->id }}">{{ $service->name }} - {{ $service->name_ar }}</option>
+                    <option {{ old('service_id') == $service->id ? 'selected' : ''}} value="{{ $service->id }}">{{ $service->name }} - {{ $service->name_ar }}</option>
                     @endforeach
                   </select>
                 </div>
@@ -65,7 +74,7 @@
                   <label class="form-control-label">العميل: <span class="tx-danger">*</span></label>
                   <select class="form-control" type="text" name="client_id">
                     @foreach($clients as $client)
-                    <option {{ old('client_id') == $client->id ? 'checked' : ''}} value="{{ $client->id }}">{{ $client->name }} - {{ $client->name_ar }}</option>
+                    <option {{ old('client_id') == $client->id ? 'selected' : ''}} value="{{ $client->id }}">{{ $client->name }} - {{ $client->name_ar }}</option>
                     @endforeach
                   </select>                
                 </div>
@@ -95,13 +104,21 @@
                 </div>
               </div><!-- col-4 -->
               <div class="col-lg-12">
-                <div class="form-groub">
-                  <label for="">صورة المشروع <span class="tx-danger">*</span></label>
-                  <img style="width: 200px;height: 200px;display: block" src="{{ asset('bracketplus1.4/app/img/img11.jpg') }}" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="form-group">
-                  <input id="customFile" class="custom-file-input" type="file" name="photo" value="{{ old('photo') }}" placeholder="ادخل عنوان المشروع بالانجليزي">
-                  <label style="top: 213px;width: 200px;" class="custom-file-label m-3" for="customFile"></label>
+                <div class="form-group ">
+                  <label class="d-block" for="photo">أختر الصورة <span class="text-danger">* الحجم المناسب (1000 * (*))</span></label>
+                  <div class="fileinput fileinput-new" data-provides="fileinput">
+                      <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                      <div>
+                          <span class="btn default btn-file">
+                              <input type="file" name="photo" id="photo" value="{{ old('photo') }}" class="file" data-initial-preview="">
+                              @error('photo')
+                              <div class="alert alert-danger">
+                                  {{ $message }}
+                              </div>
+                              @enderror
+                          </span>
+                      </div>
+                  </div>
                 </div>
               </div><!-- col-4 -->
               <div class="col-lg-3 mg-t-20 mg-lg-t-0">
@@ -141,6 +158,15 @@
               </div><!-- col-8 -->
             </div>
           </div><!-- tab-pane -->
+          <div id="project-imgs" class="tab-pane fade " role="tabpanel" aria-labelledby="home-tab">
+            <div class="row mg-b-25">
+              <div class="col-sm-12">
+                  <div class="form-group">
+                    <input id="file-1" type="file" name="project_imgs[]" data-overwrite-initial="false" multiple class="file" data-show-upload="false" data-msg-placeholder="اسقط الصور هنا" data-browse-on-zone-click="true" data-min-file-count="1">
+                  </div>
+              </div>
+            </div>
+          </div><!-- tab-pane -->
         </div>
       </div>
 
@@ -157,10 +183,49 @@
 
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<!-- buffer.min.js and filetype.min.js are necessary in the order listed for advanced mime type parsing and more correct
+preview. This is a feature available since v5.5.0 and is needed if you want to ensure file mime type is parsed 
+correctly even if the local file's extension is named incorrectly. This will ensure more correct preview of the
+selected file (note: this will involve a small processing overhead in scanning of file contents locally). If you 
+do not load these scripts then the mime type parsing will largely be derived using the extension in the filename
+and some basic file content parsing signatures. -->
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/buffer.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/filetype.min.js" type="text/javascript"></script>
+<!-- the main fileinput plugin script JS file -->
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/fileinput.min.js"></script>
 <script>
   $('.summernote').summernote({
     height: 150
   })
+</script>
+<script>
+  $(".file").fileinput({
+      theme: 'fa',
+      language: 'ar',
+      uploadUrl: '/test',
+      rtl: true,
+      showUpload: false,
+      fileActionSettings: {
+          showUpload: false,
+      },
+      dropZoneTitle: 'افلت الصور هنا <br/>',
+      dropZoneClickTitle: 'أو اضغط لتحديد الصور <br/>',
+      showRemove: true,
+      allowedFileExtensions: ['jpg', 'gif', 'jpeg'],
+      overwriteInitial: false,
+      maxFileSize: 4000,
+      maxFileCount: " 10 ",
+      msgFilesTooMany: 'عدد الصور المحددة <b>({n})</b> تخطى الحد الأقصى <b>{m}</b>!',
+      msgPlaceholder: 'اختر الصورة',
+      slugCallback: function (filename) {
+          return filename.replace('(', '_').replace(']', '_');
+      },
+      browseLabel: 'تصفح',
+      browseClass: 'btn btn-teal',
+      removeLabel: 'حذف',
+
+  });
+  
 </script>
 @endpush
 

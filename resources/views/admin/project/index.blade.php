@@ -48,7 +48,7 @@
             <th scope="row">{{ $project->id }}</th>
             <td><img style="width: 50px;height: 50px;" src="{{ asset($project->photo) }}" class="img-fluid img-thumbnail" alt=""></td>
             <td>{{ $project->name_ar }}</td>
-            <td>{{ $project->service->name }}</td>
+            <td>{{ $project->service->name_ar }}</td>
             <td>{{ $project->client->name_ar }}</td>
             <td>{{ $project->start_date }}</td>
             <td>{{ $project->finish_date }}</td>

@@ -27,6 +27,9 @@
             <li class="nav-item">
                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#descr-info" role="tab" aria-controls="profile" aria-selected="false">البيانات الوصفية</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" id="images" data-toggle="tab" href="#project-imgs" role="tab" aria-controls="profile" aria-selected="false">صور المشروع</a>
+            </li>
         </ul>
         <div class="form-layout form-layout-1">
             <div class="tab-content" data-select2-id="31">
@@ -118,6 +121,16 @@
                         </div><!-- col-8 -->
                     </div>
                 </div><!-- tab-pane -->
+
+                <div id="project-imgs" class="tab-pane fade " role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                        @foreach($project->images as $img)
+                        <div class="col-sm-6 col-md-3 mg-t-20 mg-md-t-0  mb-3">
+                          <img style="width: 200px; height: 200px" src="{{ asset($img->path) }}" class="img-fluid img-thumbnail" alt="{{ $img->title }}">
+                        </div><!-- col-2 -->
+                        @endforeach
+                      </div>
+                  </div><!-- tab-pane -->
             </div>
         </div>
     </div>

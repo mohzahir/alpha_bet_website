@@ -78,8 +78,11 @@ class ProjectImageController extends Controller
      * @param  \App\Models\ProjectImage  $projectImage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ProjectImage $projectImage)
+    public function destroy($img_id)
     {
-        //
+        $projectImage = ProjectImage::findOrFail($img_id);
+        $projectImage->delete();
+
+        return redirect()->back();
     }
 }

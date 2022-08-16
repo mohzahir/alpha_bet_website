@@ -3,20 +3,26 @@
 
   @push('links')
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+  <!-- default icons used in the plugin are from Bootstrap 5.x icon library (which can be enabled by loading CSS below) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css" crossorigin="anonymous">
+<!-- the fileinput plugin styling CSS file -->
+<link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+<!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
+<link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css">
   @endpush
 
   <x-slot name="header">
       <nav class="breadcrumb pd-0 mg-0 tx-12">
           <a class="breadcrumb-item" href="{{ route('dashboard') }}">لوحة التحكم</a>
-          <a class="breadcrumb-item" href="{{ route('service.index') }}">إدارة الخدمات</a>
-          <span class="breadcrumb-item active">{{ $service->name_ar }}</span>
+          <a class="breadcrumb-item" href="{{ route('project.index') }}">إدارة المشاريع</a>
+          <span class="breadcrumb-item active">{{ $project->name_ar }}</span>
           <span class="breadcrumb-item active">تعديل</span>
       </nav>
   </x-slot>
   <x-slot name="title">
     <i class="icon ion-stats-bars"></i>
     <div>
-      <h4>تعديل خدمة</h4>
+      <h4>تعديل مشروع</h4>
       <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>
     </div>
     
@@ -32,8 +38,11 @@
       <li class="nav-item">
         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#descr-info" role="tab" aria-controls="profile" aria-selected="false">البيانات الوصفية</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" id="images" data-toggle="tab" href="#project-imgs" role="tab" aria-controls="profile" aria-selected="false">صور المشروع</a>
+      </li>
     </ul>
-    <form action="{{ route('service.update', ['service' => $service->id]) }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('project.update', ['project' => $project->id]) }}" method="post" enctype="multipart/form-data">
       @csrf
       @method('PATCH')
       <div class="form-layout form-layout-1">
@@ -43,28 +52,88 @@
               <div class="col-lg-6">
                 <div class="form-group">
                   <label class="form-control-label">العنوان بالعربي: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="name_ar" value="{{ $service->name_ar }}" placeholder="ادخل عنوان الخدمة بالعربي">
+                  <input class="form-control" type="text" name="name_ar" value="{{ $project->name_ar }}" placeholder="ادخل عنوان المشروع بالعربي">
                 </div>
               </div><!-- col-4 -->
               <div class="col-lg-6">
                 <div class="form-group">
                   <label class="form-control-label">العنوان بالانجليزي: <span class="tx-danger">*</span></label>
-                  <input class="form-control" type="text" name="name" value="{{ $service->name }}" placeholder="ادخل عنوان الخدمة بالانجليزي">
+                  <input class="form-control" type="text" name="name" value="{{ $project->name }}" placeholder="ادخل عنوان المشروع بالانجليزي">
+                </div>
+              </div><!-- col-4 -->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">الخدمة <span class="tx-danger">*</span></label>
+                  <select class="form-control" type="text" name="service_id">
+                    @foreach($services as $service)
+                    <option {{ $project->service->id == $service->id ? 'selected' : '' }} value="{{ $service->id }}">{{ $service->name }} - {{ $service->name_ar }}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div><!-- col-4 -->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">العميل: <span class="tx-danger">*</span></label>
+                  <select class="form-control" type="text" name="client_id">
+                    @foreach($clients as $client)
+                    <option {{ $project->client->id == $client->id ? 'selected' : ''}} value="{{ $client->id }}">{{ $client->name }} - {{ $client->name_ar }}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div><!-- col-4 -->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">زمن البداية: <span class="tx-danger">*</span></label>
+                  <input class="form-control" type="date" name="start_date" value="{{ $project->start_date }}" placeholder="ادخل عنوان المشروع بالعربي">
+                </div>
+              </div><!-- col-4 -->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">زمن النهاية<span class="tx-danger">*</span></label>
+                  <input class="form-control" type="date" name="finish_date" value="{{ $project->finish_date }}" placeholder="ادخل عنوان المشروع بالانجليزي">
+                </div>
+              </div><!-- col-4 -->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">المكان بالعربي: <span class="tx-danger">*</span></label>
+                  <input class="form-control" type="text" name="location_ar" value="{{ $project->location_ar }}" placeholder="ادخل عنوان المشروع بالعربي">
+                </div>
+              </div><!-- col-4 -->
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form-control-label">المكان بالانجليزي<span class="tx-danger">*</span></label>
+                  <input class="form-control" type="text" name="location" value="{{ $project->location }}" placeholder="ادخل عنوان المشروع بالانجليزي">
                 </div>
               </div><!-- col-4 -->
               <div class="col-lg-12">
-                <div class="form-groub">
-                  <label for="">صورة الخدمة <span class="tx-danger">*</span></label>
-                  <img style="width: 200px;height: 200px;display: block" src="{{ asset($service->photo) }}" class="img-fluid img-thumbnail" alt="">
+                <!-- <div class="form-groub">
+                  <label for="">صورة المشروع <span class="tx-danger">*</span></label>
+                  <img style="width: 200px;height: 200px;display: block" src="{{ asset($project->photo) }}" class="img-fluid img-thumbnail" alt="">
                 </div>
                 <div class="form-group">
-                  <input id="customFile" class="custom-file-input" type="file" name="photo" value="{{ $service->photo }}">
+                  <input id="customFile" class="custom-file-input" type="file" name="photo" value="{{ $project->photo }}">
                   <label style="top: 213px;width: 200px;" class="custom-file-label m-3" for="customFile"></label>
+                </div> -->
+                <div class="form-group ">
+                  <label class="d-block" for="photo">أختر الصورة <span class="text-danger">* الحجم المناسب (1000 * (*))</span></label>
+                  <div class="fileinput fileinput-new" data-provides="fileinput">
+                      <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                      <div>
+                          <span class="btn default btn-file">
+                              <input type="file" name="photo" id="photo" value="{{ old('photo') }}" class="file" data-initial-preview="<img style='width: 100%; height: 100%' src='{{ asset($project->photo) }}'></img>">
+                              @error('photo')
+                              <div class="alert alert-danger">
+                                  {{ $message }}
+                              </div>
+                              @enderror
+                          </span>
+                      </div>
+                  </div>
                 </div>
               </div><!-- col-4 -->
               <div class="col-lg-3 mg-t-20 mg-lg-t-0">
                 <label class="ckbox">
-                  <input type="checkbox" name="is_featured" {{ $service->is_featured ? 'checked' : ''}} value="1"><span>الخدمة مميزة ؟ <small>الخدمات المميزة سيتم عرضها على الصفحة الرئيسية</small></span>
+                  <input type="checkbox" name="is_featured" {{ $project->is_featured ? 'checked' : ''}} value="1"><span>المشروع مميز ؟ <small>المشاريع السيتم عرضها على الصفحة الرئيسية</small></span>
                 </label>
               </div><!-- col-8 -->
             </div>
@@ -76,27 +145,47 @@
               <div class="col-lg-6">
                 <div class="form-group mg-b-10-force">
                   <label class="form-control-label">الوصف القصير بالعربي: <span class="tx-danger">*</span></label>
-                  <textarea class="form-control" type="text" name="short_descr_ar" placeholder="ادخل الوصف القصير بالعربي">{{ $service->short_descr_ar }}</textarea>
+                  <textarea class="form-control" type="text" name="short_descr_ar" placeholder="ادخل الوصف القصير بالعربي">{{ $project->short_descr_ar }}</textarea>
                 </div>
               </div><!-- col-8 -->
               <div class="col-lg-6">
                 <div class="form-group mg-b-10-force">
                   <label class="form-control-label">الوصف القصير بالانجليزي: <span class="tx-danger">*</span></label>
-                  <textarea class="form-control" type="text" name="short_descr" placeholder="ادخل الوصف القصير بالانجليزي">{{ $service->short_descr }}</textarea>
+                  <textarea class="form-control" type="text" name="short_descr" placeholder="ادخل الوصف القصير بالانجليزي">{{ $project->short_descr }}</textarea>
                 </div>
               </div><!-- col-8 -->
               <div class="col-lg-12">
                 <div class="form-group mg-b-10-force">
                   <label class="form-control-label">الوصف الكامل بالعربي: <span class="tx-danger">*</span></label>
-                  <textarea class="form-control summernote" type="text" name="descr_ar" placeholder="ادخل الوصف الكامل بالعربي">{{ $service->descr_ar }}</textarea>
+                  <textarea class="form-control summernote" type="text" name="descr_ar" placeholder="ادخل الوصف الكامل بالعربي">{{ $project->descr_ar }}</textarea>
                 </div>
               </div><!-- col-8 -->
               <div class="col-lg-12">
                 <div class="form-group mg-b-10-force">
                   <label class="form-control-label">الوصف الكامل بالانجليزي: <span class="tx-danger">*</span></label>
-                  <textarea class="form-control summernote" type="text" name="descr" placeholder="ادخل الوصف الكامل بالانجليزي">{{ $service->descr }}</textarea>
+                  <textarea class="form-control summernote" type="text" name="descr" placeholder="ادخل الوصف الكامل بالانجليزي">{{ $project->descr }}</textarea>
                 </div>
               </div><!-- col-8 -->
+            </div>
+          </div><!-- tab-pane -->
+
+          <div id="project-imgs" class="tab-pane fade " role="tabpanel" aria-labelledby="home-tab">
+            <div class="row mb-3">
+              @foreach($project->images as $img)
+              <div class="col-sm-6 col-md-3 mg-t-20 mg-md-t-0">
+                <button title="حذف الصورة" onclick="x = confirm('هل انت متاكد ؟'); if(x){ window.location.replace(`{{ route('project.image.destroy', ['image' => $img->id]) }}`); }" type="button" style="float: right;" class="close text-danger" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+                <img style="width: 200px; height: 200px" src="{{ asset($img->path) }}" class="img-fluid img-thumbnail" alt="{{ $img->title }}">
+              </div><!-- col-2 -->
+              @endforeach
+            </div>
+            <div class="row mg-b-25">
+              <div class="col-sm-12">
+                  <div class="form-group">
+                    <input id="file-1" type="file" name="project_imgs[]" data-overwrite-initial="false" multiple class="file" data-show-upload="false" data-msg-placeholder="اسقط الصور هنا" data-browse-on-zone-click="true" data-min-file-count="1">
+                  </div>
+              </div>
             </div>
           </div><!-- tab-pane -->
         </div>
@@ -104,21 +193,60 @@
 
       <div class="card-footer mt-2">
         <button class="btn btn-info">تعديل</button>
-        <a href="{{ route('service.index') }}" class="btn btn-secondary">الغاء</a>
+        <a href="{{ route('project.index') }}" class="btn btn-secondary">الغاء</a>
       </div><!-- form-layout-footer -->
-      
         
-  
-        
+    </form>
+    <form id="delete-form" style="display:none;" method="get">
+      @csrf
     </form>
   </div>
 
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<!-- buffer.min.js and filetype.min.js are necessary in the order listed for advanced mime type parsing and more correct
+preview. This is a feature available since v5.5.0 and is needed if you want to ensure file mime type is parsed 
+correctly even if the local file's extension is named incorrectly. This will ensure more correct preview of the
+selected file (note: this will involve a small processing overhead in scanning of file contents locally). If you 
+do not load these scripts then the mime type parsing will largely be derived using the extension in the filename
+and some basic file content parsing signatures. -->
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/buffer.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/filetype.min.js" type="text/javascript"></script>
+<!-- the main fileinput plugin script JS file -->
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/fileinput.min.js"></script>
 <script>
   $('.summernote').summernote({
     height: 150
   })
+</script>
+<script>
+  $(".file").fileinput({
+      theme: 'fa',
+      language: 'ar',
+      uploadUrl: '/test',
+      rtl: true,
+      showUpload: false,
+      fileActionSettings: {
+          showUpload: false,
+      },
+      dropZoneTitle: 'افلت الصور هنا <br/>',
+      dropZoneClickTitle: 'أو اضغط لتحديد الصور <br/>',
+      showRemove: true,
+      allowedFileExtensions: ['jpg', 'gif', 'jpeg'],
+      overwriteInitial: false,
+      maxFileSize: 4000,
+      maxFileCount: " 10 ",
+      msgFilesTooMany: 'عدد الصور المحددة <b>({n})</b> تخطى الحد الأقصى <b>{m}</b>!',
+      msgPlaceholder: 'اختر الصورة',
+      slugCallback: function (filename) {
+          return filename.replace('(', '_').replace(']', '_');
+      },
+      browseLabel: 'تصفح',
+      browseClass: 'btn btn-teal',
+      removeLabel: 'حذف',
+
+  });
+  
 </script>
 @endpush
 
