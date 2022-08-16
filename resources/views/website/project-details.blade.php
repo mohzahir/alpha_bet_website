@@ -28,7 +28,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-7 col-md-6">
                             <div class="projects-info-image">
-                                <img src="{{ asset($project->photo) }}" alt="image">
+                                <img style="width: 100%; height: 414.5px" src="{{ asset($project->photo) }}" alt="image">
 
                                 <div class="info-shape">
                                     <img src="{{ asset('assets/images/projects-details/circle-shape.png') }}" alt="image">
@@ -69,10 +69,10 @@
             <div class="row">
                 @if(count($project->images) > 0)
                 @foreach($project->images as $img)
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="single-gallery-item">
                         <a data-fancybox="gallery" href="{{ asset($img->path) }}">
-                            <img src="{{ asset($img->path) }}" alt="{{ $img->title }}">
+                            <img style="width: 100%; height: 304px" src="{{ asset($img->path) }}" alt="{{ $img->title }}">
                         </a>
                     </div>
                 </div>

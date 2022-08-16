@@ -19,6 +19,16 @@
         </ul>
       </li><!-- br-menu-item -->
       <li class="br-menu-item">
+        <a href="#" class="br-menu-link with-sub {{ request()->is('admin/client/*') || request()->routeIs('client.index') ? 'active' : '' }}">
+          <i class="menu-item-icon icon ion-ios-people-outline tx-22"></i>
+          <span class="menu-item-label">العملاء</span>
+        </a><!-- br-menu-link -->
+        <ul class="br-menu-sub">
+          <li class="sub-item"><a href="{{ route('client.index') }}" class="sub-link {{ request()->routeIs('client.index') ? 'active' : '' }}">عرض العملاء</a></li>
+          <li class="sub-item"><a href="{{ route('client.create') }}" class="sub-link {{ request()->routeIs('client.create') ? 'active' : '' }}">إضافة عميل</a></li>
+        </ul>
+      </li><!-- br-menu-item -->
+      <li class="br-menu-item">
         <a href="#" class="br-menu-link with-sub {{ request()->is('admin/project/*') || request()->routeIs('project.index') ? 'active' : '' }}">
           <i class="menu-item-icon icon ion-stats-bars tx-22"></i>
           <span class="menu-item-label">المشاريع</span>

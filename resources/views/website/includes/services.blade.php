@@ -19,7 +19,7 @@
                     @foreach($services as $service)
                     <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="services-item">
                         <div class="services-image">
-                            <a href="{{ route('service.details', ['service' => $service->id]) }}"><img src="{{ asset($service->photo) }}" alt="image"></a>
+                            <a href="{{ route('service.details', ['service' => $service->id]) }}"><img style="width: 100%; height: 158.96px" src="{{ asset($service->photo) }}" alt="image"></a>
                         </div>
                         <div class="services-content">
                             <h3>

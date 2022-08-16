@@ -73,9 +73,9 @@
             </td>
             <td>
               <div style="display: flex;justify-content: space-evenly;">
-                <a href="{{ route('project.show', ['project' => $project->id]) }}" class="btn btn-warning btn-icon " title="التفاصيل"><div><i class="icon ion-ios-information-outline tx-20"></i></div></a>
-                <a href="{{ route('project.edit', ['project' => $project->id]) }}" class="btn btn-info btn-icon " title="تعديل"><div><i class="icon ion-android-create tx-20"></i></div></a>
-                <button onclick="x = confirm('هل انت متأكد ؟'); if(x){ $('.form-delete{{ $index }}').submit() }" class="btn btn-danger btn-icon" title="حذف"><div><i class="icon ion-android-remove-circle tx-20"></i></div></button>
+                <a href="{{ route('project.show', ['project' => $project->id]) }}" class="btn btn-warning btn-icon " title="التفاصيل"><div><i class="icon ion-ios-information-outline"></i></div></a>
+                <a href="{{ route('project.edit', ['project' => $project->id]) }}" class="btn btn-info btn-icon " title="تعديل"><div><i class="icon ion-android-create"></i></div></a>
+                <button onclick="x = confirm('هل انت متأكد ؟'); if(x){ $('.form-delete{{ $index }}').submit() }" class="btn btn-danger btn-icon" title="حذف"><div><i class="icon ion-android-remove-circle"></i></div></button>
               </div>
               <form class="form-delete{{ $index }}" method="post" action="{{ route('project.destroy', ['project' => $project->id]) }}">
                 @csrf

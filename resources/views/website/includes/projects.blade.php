@@ -19,7 +19,7 @@
                     @foreach($projects as $project)
                     <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="projects-item bg-F2F1F3" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                         <div class="projects-image">
-                            <a href="{{ route('project.details', ['project' => $project->id]) }}"><img src="{{ asset($project->photo) }}" alt="image"></a>
+                            <a href="{{ route('project.details', ['project' => $project->id]) }}"><img style="width: 100%; height: 252.28px" src="{{ asset($project->photo) }}" alt="image"></a>
                         </div>
                         <div class="projects-content">
                             <h3>

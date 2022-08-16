@@ -37,9 +37,9 @@
             <div id="Container" class="row justify-content-center">
                 @foreach($projects as $index => $project)
                 <div class="col-lg-4 col-md-6 mix  {{ $services_classes }} ">
-                    <div class="single-projects-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
-                        <div class="projects-image">
-                            <a href="{{ route('project.details', ['project' => $project->id]) }}"><img src="{{ asset($project->photo) }}" alt="image"></a>
+                    <div class="single-projects-item" style="width: 365px; height: 237.33px" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                        <div style="width: 100%; height: 100%" class="projects-image">
+                            <a style="width: 100%; height: 100%" href="{{ route('project.details', ['project' => $project->id]) }}"><img style="width: 100%; height: 100%" src="{{ asset($project->photo) }}" alt="image"></a>
                         </div>
                         <div class="projects-content">
                             <h3>

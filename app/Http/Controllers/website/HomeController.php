@@ -4,6 +4,7 @@ namespace App\Http\Controllers\website;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
+use App\Models\Client;
 use App\Models\project;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -18,6 +19,7 @@ class HomeController extends Controller
             'services' => Service::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->limit(5)->get(),
             'projects' => project::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->limit(5)->get(),
             'about' => About::find(1),
+            'clients' => Client::where('is_featured', 1)->get(),
         ]);
     }
     public function services()
@@ -62,6 +64,7 @@ class HomeController extends Controller
         return view('website.about', [
             'locale' => app()->getLocale(),
             'about' => About::find(1),
+            'clients' => Client::where('is_featured', 1)->get(),
         ]);
     }
     public function products()

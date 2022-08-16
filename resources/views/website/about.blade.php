@@ -24,7 +24,7 @@
     <!-- End About Area -->
     
     <!-- Start Partner Area -->
-    @include('website.includes.partner')
+    @include('website.includes.partner', ['clients', $clients])
     <!-- End Partner Area -->
 
     <!-- Start Video Area -->
