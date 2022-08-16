@@ -35,14 +35,14 @@
                 @foreach($services as $service)
                 <div @if(app()->getLocale() == 'ar') dir="rtl" @endif class="services-item">
                     <div class="services-image">
-                        <a href="{{ route('service.details', ['service' => $service->id]) }}"><img src="{{ asset($service->photo) }}" alt="image"></a>
+                        <a href="{{ route('service.details', ['service' => $service->id]) }}"><img style="width: 100%; height: 256.33px" src="{{ asset($service->photo) }}" alt="image"></a>
                     </div>
                     <div class="services-content">
                         <h3>
                             <a href="{{ route('service.details', ['service' => $service->id]) }}">{{ $locale == 'ar' ? $service->name_ar : $service->name}}</a>
                         </h3>
                         <p>{{ Str::limit($locale == 'ar' ? $service->short_descr_ar : $service->short_descr, 50)}}</p>
-                        <a href="{{ route('service.details', ['service' => $service->id]) }}" class="services-btn">View More</a>
+                        <a href="{{ route('service.details', ['service' => $service->id]) }}" class="services-btn">{{ __('locale.View More') }}</a>
                     </div>
                 </div>
                 @endforeach

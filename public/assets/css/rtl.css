@@ -1103,7 +1103,7 @@
 }
 
 .skill-bar .progress-number-mark {
-  left: 100% !important;
+  right: 90% !important;
 }
 
 .buy-now-btn {

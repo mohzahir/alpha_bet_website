@@ -45,7 +45,7 @@
                         <p class="progress-title-holder">
                             <span class="progress-title">{{ $locale == 'ar' ? $about->skill1_name_ar : $about->skill1_name }}</span>
                             <span class="progress-number-wrapper">
-                                <span class="progress-number-mark">
+                                <span class="progress-number-mark" style="left: 50% !important;">
                                     <span class="percent"></span>
                                     <span class="down-arrow"></span>
                                 </span>
@@ -60,7 +60,7 @@
                         <p class="progress-title-holder">
                             <span class="progress-title">{{ $locale == 'ar' ? $about->skill2_name_ar : $about->skill2_name }}</span>
                             <span class="progress-number-wrapper">
-                                <span class="progress-number-mark">
+                                <span class="progress-number-mark" style="left: 50% !important;">
                                     <span class="percent"></span>
                                     <span class="down-arrow"></span>
                                 </span>
@@ -75,7 +75,7 @@
                         <p class="progress-title-holder">
                             <span class="progress-title">{{ $locale == 'ar' ? $about->skill3_name_ar : $about->skill3_name }}</span>
                             <span class="progress-number-wrapper">
-                                <span class="progress-number-mark">
+                                <span class="progress-number-mark" style="left: 50% !important;">
                                     <span class="percent"></span>
                                     <span class="down-arrow"></span>
                                 </span>
@@ -90,7 +90,7 @@
                         <p class="progress-title-holder">
                             <span class="progress-title">{{ $locale == 'ar' ? $about->skill4_name_ar : $about->skill4_name }}</span>
                             <span class="progress-number-wrapper">
-                                <span class="progress-number-mark">
+                                <span class="progress-number-mark" style="left: 50% !important;">
                                     <span class="percent"></span>
                                     <span class="down-arrow"></span>
                                 </span>
