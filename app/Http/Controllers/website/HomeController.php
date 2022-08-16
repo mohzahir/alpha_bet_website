@@ -5,6 +5,7 @@ namespace App\Http\Controllers\website;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Client;
+use App\Models\Product;
 use App\Models\project;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -18,8 +19,10 @@ class HomeController extends Controller
             'locale' => app()->getLocale(),
             'services' => Service::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->limit(5)->get(),
             'projects' => project::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->limit(5)->get(),
+            'products' => Product::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->limit(3)->get(),
             'about' => About::find(1),
             'clients' => Client::where('is_featured', 1)->get(),
+
         ]);
     }
     public function services()
@@ -69,16 +72,9 @@ class HomeController extends Controller
     }
     public function products()
     {
-        // $services = Service::where('status', 'active')->has('products')->orderBy('id', 'DESC')->get();
-        // $services_classes = '';
-        // foreach ($services->pluck('name') as $service_name) {
-        //     $services_classes .= ' ' . Str::slug($service_name);
-        // }
         return view('website.products', [
-            // 'services' => $services,
-            // 'services_classes' => $services_classes,
             'locale' => app()->getLocale(),
-            // 'products' => Project::where('status', 'active')->orderBy('id', 'DESC')->get(),
+            'products' => Product::where('status', 'active')->orderBy('id', 'DESC')->get(),
         ]);
     }
 }

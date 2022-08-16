@@ -7,7 +7,7 @@
       </nav>
   </x-slot>
   <x-slot name="title">
-    <i class="icon ion-ios-star-outline"></i>
+    <i class="icon ion-ios-people-outline"></i>
     <div>
       <h4>إدارة العملاء</h4>
       <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>
@@ -79,16 +79,18 @@
         <tfoot class="">
           <tr>
             <th>ID</th>
-            <th>الصورة</th>
+            <th>اللوقو</th>
             <th>الاسم العربي</th>
-            <th>الاسم الانجليزي</th>
-            <th>الحالة</th>
+            <th>رقم الهاتف</th>
+            <th>الايميل</th>
+            <th>المكان</th>
             <th>العميل مميز</th>
             <th>التحكم</th>
           </tr>
         </tfoot>
       </table>
     </div><!-- bd -->
+    {{ $clients->links() }}
   </div>
 
 

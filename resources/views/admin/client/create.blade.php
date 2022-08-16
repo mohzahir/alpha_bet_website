@@ -13,7 +13,7 @@
       </nav>
   </x-slot>
   <x-slot name="title">
-    <i class="icon ion-ios-star-outline"></i>
+    <i class="icon ion-ios-people-outline"></i>
     <div>
       <h4>إضافة عميل</h4>
       <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>

@@ -61,27 +61,31 @@
         <div class="container">
             <div class="features-inner-box">
                 <div class="row justify-content-center">
+                    @if(count($products) > 0)
+                    @foreach($products as $product)
                     <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                         <div class="single-features-card" data-tilt>
                             <div class="features-image" data-tilt>
-                                <a href="services-details.html"><img src="{{ asset('assets/images/features/features-1.png') }}" alt="image"></a>
+                                <a href="{{ route('products') }}"><img style="width: 90px; height: 96px" src="{{ asset($product->photo) }}" alt="image"></a>
                             </div>
                             <div class="content">
                                 <h3>
-                                    <a href="services-details.html">{{ __('locale.Branding Strategy') }}</a>
+                                    <a href="{{ route('products') }}">{{ $locale == 'ar' ? $product->name_ar : $product->name }}</a>
                                 </h3>
-                                <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr</p>
+                                <p>{{ $locale == 'ar' ? \Str::limit($product->descr_ar, '100') : \Str::limit($product->descr, '100') }}</p>
                             </div>
                             <div class="hover-content">
                                 <h3>
-                                    <a href="services-details.html">{{ __('locale.Branding Strategy') }}</a>
+                                    <a href="{{ route('products') }}">{{ $locale == 'ar' ? $product->name_ar : $product->name }}</a>
                                 </h3>
-                                <a href="services-details.html" class="features-btn">{{__('locale.View More') }}</a>
+                                <a href="{{ route('products') }}" class="features-btn" }}>{{__('locale.View More') }}</a>
                             </div>
                         </div>
                     </div>
+                    @endforeach
+                    @endif
 
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                    <!-- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                         <div class="single-features-card" data-tilt>
                             <div class="features-image" data-tilt>
                                 <a href="services-details.html"><img src="{{ asset('assets/images/features/features-2.png') }}" alt="image"></a>
@@ -119,7 +123,7 @@
                                 <a href="services-details.html" class="features-btn">{{ __('locale.View More') }}</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

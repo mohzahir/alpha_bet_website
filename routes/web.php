@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ProjectImageController;
 use App\Http\Controllers\ServiceController;
@@ -39,6 +40,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('service', ServiceController::class);
     Route::get('/service/{service}/change-status', [ServiceController::class, 'changeStatus'])->name('service.change.status');
+    Route::resource('product', ProductController::class);
+    Route::get('/product/{product}/change-status', [ProductController::class, 'changeStatus'])->name('product.change.status');
     Route::resource('client', ClientController::class);
     Route::resource('project', ProjectController::class);
     Route::get('/project/{project}/change-status', [ProjectController::class, 'changeStatus'])->name('project.change.status');
