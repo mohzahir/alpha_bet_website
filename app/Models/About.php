@@ -30,5 +30,6 @@ class About extends Model
         'skill4_name',
         'skill4_name_ar',
         'skill4_rate',
+        'video_url',
     ];
 }

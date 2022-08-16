@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
@@ -38,6 +39,8 @@ Route::get('/products', [HomeController::class, 'products'])->name('products');
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+    Route::post('/about', [AboutController::class, 'store'])->name('about.store');
     Route::resource('service', ServiceController::class);
     Route::get('/service/{service}/change-status', [ServiceController::class, 'changeStatus'])->name('service.change.status');
     Route::resource('product', ProductController::class);

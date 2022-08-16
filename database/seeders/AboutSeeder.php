@@ -36,6 +36,7 @@ class AboutSeeder extends Seeder
                 'skill4_name' => 'Cyber Security',
                 'skill4_name_ar' => 'امن المعلومات',
                 'skill4_rate' => '70',
+                'video_url' => 'https://www.youtube.com/watch?v=ODfy2YIKS1M',
             ],
         ]);
     }

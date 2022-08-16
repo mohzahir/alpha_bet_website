@@ -18,16 +18,7 @@
           <li class="sub-item"><a href="{{ route('service.create') }}" class="sub-link {{ request()->routeIs('service.create') ? 'active' : '' }}">إضافة خدمة</a></li>
         </ul>
       </li><!-- br-menu-item -->
-      <li class="br-menu-item">
-        <a href="#" class="br-menu-link with-sub {{ request()->is('admin/product/*') || request()->routeIs('product.index') ? 'active' : '' }}">
-          <i class="menu-item-icon icon ion-bag tx-22"></i>
-          <span class="menu-item-label">المنتجات</span>
-        </a><!-- br-menu-link -->
-        <ul class="br-menu-sub">
-          <li class="sub-item"><a href="{{ route('product.index') }}" class="sub-link {{ request()->routeIs('product.index') ? 'active' : '' }}">عرض المنتجات</a></li>
-          <li class="sub-item"><a href="{{ route('product.create') }}" class="sub-link {{ request()->routeIs('product.create') ? 'active' : '' }}">إضافة منتج</a></li>
-        </ul>
-      </li><!-- br-menu-item -->
+      
       <li class="br-menu-item">
         <a href="#" class="br-menu-link with-sub {{ request()->is('admin/client/*') || request()->routeIs('client.index') ? 'active' : '' }}">
           <i class="menu-item-icon icon ion-ios-people-outline tx-22"></i>
@@ -38,6 +29,7 @@
           <li class="sub-item"><a href="{{ route('client.create') }}" class="sub-link {{ request()->routeIs('client.create') ? 'active' : '' }}">إضافة عميل</a></li>
         </ul>
       </li><!-- br-menu-item -->
+
       <li class="br-menu-item">
         <a href="#" class="br-menu-link with-sub {{ request()->is('admin/project/*') || request()->routeIs('project.index') ? 'active' : '' }}">
           <i class="menu-item-icon icon ion-stats-bars tx-22"></i>
@@ -47,6 +39,24 @@
           <li class="sub-item"><a href="{{ route('project.index') }}" class="sub-link {{ request()->routeIs('project.index') ? 'active' : '' }}">عرض المشاريع</a></li>
           <li class="sub-item"><a href="{{ route('project.create') }}" class="sub-link {{ request()->routeIs('project.create') ? 'active' : '' }}">إضافة مشروع</a></li>
         </ul>
+      </li><!-- br-menu-item -->
+
+      <li class="br-menu-item">
+        <a href="#" class="br-menu-link with-sub {{ request()->is('admin/product/*') || request()->routeIs('product.index') ? 'active' : '' }}">
+          <i class="menu-item-icon icon ion-bag tx-22"></i>
+          <span class="menu-item-label">المنتجات</span>
+        </a><!-- br-menu-link -->
+        <ul class="br-menu-sub">
+          <li class="sub-item"><a href="{{ route('product.index') }}" class="sub-link {{ request()->routeIs('product.index') ? 'active' : '' }}">عرض المنتجات</a></li>
+          <li class="sub-item"><a href="{{ route('product.create') }}" class="sub-link {{ request()->routeIs('product.create') ? 'active' : '' }}">إضافة منتج</a></li>
+        </ul>
+      </li><!-- br-menu-item -->
+      
+      <li class="br-menu-item">
+        <a href="{{ route('about.index') }}" class="br-menu-link {{ request()->routeIs('about.index') ? 'active' : '' }}">
+          <i class="menu-item-icon icon ion-ios-information-outline tx-24"></i>
+          <span class="menu-item-label">معلومات الشركة</span>
+        </a><!-- br-menu-link -->
       </li><!-- br-menu-item -->
       
     </ul><!-- br-sideleft-menu -->

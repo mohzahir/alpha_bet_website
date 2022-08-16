@@ -5,7 +5,7 @@
                 <img src="{{ asset('assets/images/video/video.jpg') }}" alt="image">
             </div>
 
-            <a href="https://www.youtube.com/watch?v=ODfy2YIKS1M" class="video-btn popup-youtube">
+            <a href="{{ $about->video_url }}" class="video-btn popup-youtube">
                 <i class="ri-play-mini-fill"></i>
             </a>
         </div>

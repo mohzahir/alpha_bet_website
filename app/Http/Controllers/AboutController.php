@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AddAboutRequest;
 use App\Models\About;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class AboutController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.about.index', [
+            'about' => About::findOrFail(1),
+        ]);
     }
 
     /**
@@ -33,9 +36,33 @@ class AboutController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddAboutRequest $request)
     {
-        //
+        // dd($request->all());
+        About::findOrFail(1)->update([
+            'descr' => $request->descr,
+            'descr_ar' => $request->descr_ar,
+            // 'goal' => $request->goal,
+            // 'goal_ar' => $request->goal_ar,
+            'mission' => $request->mission,
+            'mission_ar' => $request->mission_ar,
+            'vision' => $request->vision,
+            'vision_ar' => $request->vision_ar,
+            'skill1_name' => $request->skill1_name,
+            'skill1_name_ar' => $request->skill1_name_ar,
+            'skill1_rate' => $request->skill1_rate,
+            'skill2_name' => $request->skill2_name,
+            'skill2_name_ar' => $request->skill2_name_ar,
+            'skill2_rate' => $request->skill2_rate,
+            'skill3_name' => $request->skill3_name,
+            'skill3_name_ar' => $request->skill3_name_ar,
+            'skill3_rate' => $request->skill3_rate,
+            'skill4_name' => $request->skill4_name,
+            'skill4_name_ar' => $request->skill4_name_ar,
+            'skill4_rate' => $request->skill4_rate,
+            'video_url' => $request->video_url,
+        ]);
+        return redirect()->back()->with('success', 'تم تحديث البيانات بنجاح');
     }
 
     /**

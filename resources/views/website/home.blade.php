@@ -218,7 +218,7 @@
     <!-- End Choose Area -->
 
     <!-- Start Video Area -->
-    @include('website.includes.video')
+    @include('website.includes.video', ['about' => $about])
     <!-- End Video Area -->
 
     <!-- Start Testimonials Area -->

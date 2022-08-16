@@ -35,6 +35,7 @@ class CreateAboutsTable extends Migration
             $table->string('skill4_name');
             $table->string('skill4_name_ar');
             $table->integer('skill4_rate');
+            $table->string('video_url');
             $table->timestamps();
         });
     }
