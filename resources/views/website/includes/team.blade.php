@@ -8,133 +8,41 @@
         </div>
 
         <div class="row justify-content-center">
+            @if(count($employees) > 0)
+            @foreach($employees as $employee)
             <div class="col-lg-3 col-sm-6">
                 <div class="single-team-card">
                     <div class="team-image" data-tilt>
-                        <img src="{{ asset('assets/images/team/team-1.png') }}" alt="image">
+                        <img style="width: 100%; height: 231.15px" src="{{ asset($employee->photo) }}" alt="image">
 
                         <ul class="team-social">
                             <li>
-                                <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                                <a href="{{ $employee->facebook_link }}" target="_blank">
                                     <i class="ri-facebook-fill"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://twitter.com/?lang=en" target="_blank">
+                                <a href="{{ $employee->twitter_link }}" target="_blank">
                                     <i class="ri-twitter-fill"></i>
                                 </a>
                             </li>
                             
                             <li>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="ri-instagram-line"></i>
+                                <a href="{{ $employee->linkedin_link }}" target="_blank">
+                                    <i class="ri-linkedin-line"></i>
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="team-content">
-                        <h3>Johny Smith</h3>
-                        <span>President & CEO</span>
+                        <h3>{{ $locale == 'ar' ? $employee->name_ar : $employee->name }}</h3>
+                        <span>{{ $locale == 'ar' ? $employee->job_title_ar : $employee->job_title }}</span>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-team-card">
-                    <div class="team-image" data-tilt>
-                        <img src="{{ asset('assets/images/team/team-2.png') }}" alt="image">
-
-                        <ul class="team-social">
-                            <li>
-                                <a href="https://www.facebook.com/EnvyTheme" target="_blank">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://twitter.com/?lang=en" target="_blank">
-                                    <i class="ri-twitter-fill"></i>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3>Jennifer Walter</h3>
-                        <span>Product Manager</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-team-card">
-                    <div class="team-image" data-tilt>
-                        <img src="{{ asset('assets/images/team/team-3.png') }}" alt="image">
-
-                        <ul class="team-social">
-                            <li>
-                                <a href="https://www.facebook.com/EnvyTheme" target="_blank">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://twitter.com/?lang=en" target="_blank">
-                                    <i class="ri-twitter-fill"></i>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3>Jems Rodrigez</h3>
-                        <span>UI UX Designer</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-team-card">
-                    <div class="team-image" data-tilt>
-                        <img src="{{ asset('assets/images/team/team-4.png') }}" alt="image">
-
-                        <ul class="team-social">
-                            <li>
-                                <a href="https://www.facebook.com/EnvyTheme" target="_blank">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://twitter.com/?lang=en" target="_blank">
-                                    <i class="ri-twitter-fill"></i>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="team-content">
-                        <h3>Deren Bravoo</h3>
-                        <span>Web Developer</span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+            @endif
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@ return [
     "Services" => "الخدمات",
     "Projects" => "المشاريع",
     "Products" => "المنتجات",
-    "Contract" => "تواصل معنا",
+    "Contact" => "تواصل معنا",
     "WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY" => "نحن شركة رائدة بمجال التقنية و نقدم حلول تقنية لاعمالك",
     "We Make The Best IT Solutions" => "نحن نقدم افضل الحلول التقنية",
     "overview.description" => "We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor.",

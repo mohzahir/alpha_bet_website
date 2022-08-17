@@ -10,30 +10,30 @@
 
                     <ul class="widget-social">
                         <li>
-                            <a href="https://www.facebook.com/EnvyTheme" target="_blank">
+                            <a href="{{ $setting->facebook_link }}" target="_blank">
                                 <i class="ri-facebook-fill"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/?lang=en" target="_blank">
+                            <a href="{{ $setting->twitter_link }}" target="_blank">
                                 <i class="ri-twitter-fill"></i>
                             </a>
                         </li>
 
                         <li>
-                            <a href="https://www.youtube.com/" target="_blank">
+                            <a href="{{ $setting->youtube_link }}" target="_blank">
                                 <i class="ri-youtube-fill"></i>
                             </a>
                         </li>
 
                         <li>
-                            <a href="https://vimeo.com/" target="_blank">
-                                <i class="ri-vimeo-fill"></i>
+                            <a href="{{ $setting->linkedin_link }}" target="_blank">
+                                <i class="ri-linkedin-fill"></i>
                             </a>
                         </li>
                         
                         <li>
-                            <a href="https://www.instagram.com/" target="_blank">
+                            <a href="{{ $setting->instagram_link }}" target="_blank">
                                 <i class="ri-instagram-line"></i>
                             </a>
                         </li>
@@ -46,18 +46,18 @@
                     <h3>{{ __('locale.Links') }}</h3>
 
                     <ul class="quick-links">
-                        <li><a href="about-style-1.html">{{ __('locale.About Us') }}</a></li>
-                        <li><a href="services-style-2.html">{{ __('locale.Services') }}</a></li>
-                        <li><a href="blog-style-1.html">{{ __('locale.News') }}</a></li>
-                        <li><a href="pricing.html">{{ __('locale.Products') }}</a></li>
-                        <li><a href="projects.html">{{ __('locale.Projects') }}</a></li>
+                        <li><a href="{{ route('about') }}">{{ __('locale.About Us') }}</a></li>
+                        <li><a href="{{ route('services') }}">{{ __('locale.Services') }}</a></li>
+                        <li><a href="{{ route('contact') }}">{{ __('locale.Contact Us') }}</a></li>
+                        <li><a href="{{ route('products') }}">{{ __('locale.Products') }}</a></li>
+                        <li><a href="{{ route('projects') }}">{{ __('locale.Projects') }}</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                    <h3>Pages</h3>
+                    <h3>{{ __('locale.Pages') }}</h3>
 
                     <ul class="quick-links">
                         <li><a href="contact.html">{{ __('locale.Contact Us') }}</a></li>
@@ -88,8 +88,8 @@
         <div class="container">
             <div class="copyright-area-content">
                 <p>
-                    Copyright @<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Coze All Rights Reserved by
-                    <a href="https://envytheme.com/" target="_blank"> EnvyTheme</a>
+                    Copyright @<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> All Rights Reserved by
+                    <a href="https://alpha-beta.com/" target="_blank"> {{ $locale == 'ar' ? $setting->company_name_ar : $setting->company_name }}</a>
                 </p>
             </div>
         </div>

@@ -132,7 +132,7 @@
     <!-- End Choose Area -->
 
     <!-- Start Team Area -->
-    @include('website.includes.team')
+    @include('website.includes.team', ['employees' => $employees])
     <!-- End Team Area -->
 
     

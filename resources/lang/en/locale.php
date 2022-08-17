@@ -6,7 +6,7 @@ return [
     "Services" => "Services",
     "Projects" => "Projects",
     "Products" => "Products",
-    "Contract" => "Contract",
+    "Contact" => "Contact",
     "WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY" => "WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY",
     "We Make The Best IT Solutions" => "We Make The Best IT Solutions",
     "overview.description" => "We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor.",

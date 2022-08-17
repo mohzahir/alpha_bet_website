@@ -5,9 +5,11 @@ namespace App\Http\Controllers\website;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Client;
+use App\Models\Employee;
 use App\Models\Product;
 use App\Models\project;
 use App\Models\Service;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -22,7 +24,8 @@ class HomeController extends Controller
             'products' => Product::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->limit(3)->get(),
             'about' => About::find(1),
             'clients' => Client::where('is_featured', 1)->get(),
-
+            'employees' => Employee::where('status', 'active')->get(),
+            'setting' => Setting::find(1),
         ]);
     }
     public function services()
@@ -31,6 +34,7 @@ class HomeController extends Controller
             'locale' => app()->getLocale(),
             // 'featured_services' => Service::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->take(4)->get(),
             'services' => Service::where('status', 'active')->orderBy('id', 'DESC')->get(),
+            'setting' => Setting::find(1),
         ]);
     }
     public function serviceDetails(Service $service)
@@ -39,20 +43,22 @@ class HomeController extends Controller
             'locale' => app()->getLocale(),
             'services' => Service::where('status', 'active')->where('is_featured', '1')->orderBy('id', 'DESC')->get(),
             'service' => $service,
+            'setting' => Setting::find(1),
         ]);
     }
     public function projects()
     {
         $services = Service::where('status', 'active')->has('projects')->orderBy('id', 'DESC')->get();
-        $services_classes = '';
-        foreach ($services->pluck('name') as $service_name) {
-            $services_classes .= ' ' . Str::slug($service_name);
+        $services_ids = [];
+        foreach ($services->pluck('id') as $service_id) {
+            array_push($services_ids, $service_id);
         }
         return view('website.projects', [
             'services' => $services,
-            'services_classes' => $services_classes,
+            'services_ids' => $services_ids,
             'locale' => app()->getLocale(),
             'projects' => Project::where('status', 'active')->orderBy('id', 'DESC')->get(),
+            'setting' => Setting::find(1),
         ]);
     }
     public function projectDetails(project $project)
@@ -60,6 +66,7 @@ class HomeController extends Controller
         return view('website.project-details', [
             'locale' => app()->getLocale(),
             'project' => $project,
+            'setting' => Setting::find(1),
         ]);
     }
     public function about()
@@ -68,6 +75,8 @@ class HomeController extends Controller
             'locale' => app()->getLocale(),
             'about' => About::find(1),
             'clients' => Client::where('is_featured', 1)->get(),
+            'employees' => Employee::where('status', 'active')->get(),
+            'setting' => Setting::find(1),
         ]);
     }
     public function products()
@@ -75,6 +84,14 @@ class HomeController extends Controller
         return view('website.products', [
             'locale' => app()->getLocale(),
             'products' => Product::where('status', 'active')->orderBy('id', 'DESC')->get(),
+            'setting' => Setting::find(1),
+        ]);
+    }
+    public function contact()
+    {
+        return view('website.contact', [
+            'locale' => app()->getLocale(),
+            'setting' => Setting::find(1),
         ]);
     }
 }

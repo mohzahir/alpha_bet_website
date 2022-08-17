@@ -139,7 +139,7 @@
     <!-- End Services Area -->
 
     <!-- Start Choose Area -->
-    <div class="choose-area pt-100 pb-75">
+    <!-- <div class="choose-area pt-100 pb-75">
         <div class="container">
             <div class="section-title section-style-two">
                 <div class="section-bg-text">PROCESS</div>
@@ -214,7 +214,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    <!-- End Choose Area -->
+
+    <!-- Start Choose Area -->
+    @include('website.includes.choose', ['bg_class' => ''])
     <!-- End Choose Area -->
 
     <!-- Start Video Area -->
@@ -222,7 +226,7 @@
     <!-- End Video Area -->
 
     <!-- Start Testimonials Area -->
-    <div class="testimonials-area ptb-100">
+    <!-- <div class="testimonials-area ptb-100">
         <div class="container-fluid">
             <div class="section-title section-style-two">
                 <div class="section-bg-text">FEEDBACK</div>
@@ -312,31 +316,31 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Testimonials Area -->
 
-    <!-- Start Talk Area -->
-    @include('website.includes.talk')
-    <!-- End Talk Area -->
+    <!-- Start Team Area -->
+    @include('website.includes.team', ['employees', $employees])
+    <!-- End Team Area -->
+
+    <!-- Start Partner Area -->
+    @include('website.includes.partner', ['clients', $clients])
+    <!-- End Partner Area -->
 
     <!-- Start Projects Area -->
     @include('website.includes.projects', ['projects' => $projects])
     <!-- End Projects Area -->
 
-    <!-- Start Partner Area -->
-    @include('website.includes.partner', ['clients', $clients])
-    <!-- End Partner Area -->
-    
-    <!-- Start Team Area -->
-    @include('website.includes.team')
-    <!-- End Team Area -->
+    <!-- Start Talk Area -->
+    @include('website.includes.talk')
+    <!-- End Talk Area -->
 
     <!-- Start Overview Area -->
     @include('website.includes.overview')
     <!-- End Overview Area -->
 
     <!-- Start Blog Area -->
-    <div class="blog-area pt-100 pb-75">
+    <!-- <div class="blog-area pt-100 pb-75">
         <div class="container">
             <div class="section-title">
                 <span>{{ __('locale.ARTICLE') }}</span>
@@ -425,6 +429,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Blog Area -->
 </x-website-layout>

@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Setting;
 use Illuminate\View\Component;
 
 class WebsiteLayout extends Component
@@ -23,6 +24,9 @@ class WebsiteLayout extends Component
      */
     public function render()
     {
-        return view('website.layout.main');
+        return view('website.layout.main', [
+            'setting' => Setting::findOrFail(1),
+            'locale' => app()->getLocale(),
+        ]);
     }
 }

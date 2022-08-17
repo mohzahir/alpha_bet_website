@@ -7,8 +7,8 @@
                 <div class="main-responsive-menu">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="{{ asset('assets/images/black-logo.png') }}" style="width: 132px; height: 50px" class="black-logo" alt="image">
-                            <img src="{{ asset('assets/images/logo.png') }}" style="width: 132px; height: 50px" class="white-logo" alt="image">
+                            <img src="{{ asset($setting->logo_black) }}" style="width: 132px; height: 50px" class="black-logo" alt="image">
+                            <img src="{{ asset($setting->logo) }}" style="width: 132px; height: 50px" class="white-logo" alt="image">
                         </a>
                     </div>
                 </div>
@@ -19,8 +19,8 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="index.html">
-                        <img src="{{ asset('assets/images/black-logo.png') }}" style="width: 132px; height: 50px" class="black-logo" class="black-logo" alt="image">
-                        <img src="{{ asset('assets/images/logo.png') }}" class="white-logo" alt="image">
+                        <img src="{{ asset($setting->logo_black) }}" style="width: 132px; height: 50px" class="black-logo" class="black-logo" alt="image">
+                        <img src="{{ asset($setting->logo) }}" style="width: 132px; height: 50px" class="white-logo" alt="image">
                     </a>
 
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -51,8 +51,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    {{ __('locale.Contract') }}  
+                                <a href="{{ route('contact') }}" class="nav-link">
+                                    {{ __('locale.Contact') }}  
                                 </a>
                             </li>
                             @if(app()->getLocale() == 'en')
@@ -100,7 +100,7 @@
 
         <div class="others-option-for-responsive">
             <div class="container">
-                <div class="dot-menu">
+                <div class="dot-menu" style="top: -50px;">
                     <div class="inner">
                         <div class="circle circle-one"></div>
                         <div class="circle circle-two"></div>
@@ -149,7 +149,7 @@
             <div class="main-responsive-menu">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="{{ asset('assets/images/logo.png') }}" alt="image">
+                        <img src="{{ asset($setting->logo) }}" alt="image">
                     </a>
                 </div>
             </div>
@@ -160,7 +160,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="index.html">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="image">
+                    <img src="{{ asset($setting->logo) }}" alt="image">
                 </a>
 
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" style="display: block;">
@@ -192,8 +192,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                {{ __('locale.Contract') }}  
+                            <a href="{{ route('contact') }}" class="nav-link">
+                                {{ __('locale.Contact') }}  
                             </a>
                         </li>
                         @if(app()->getLocale() == 'en')
