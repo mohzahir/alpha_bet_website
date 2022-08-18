@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Service;
 use App\Models\Setting;
 use Illuminate\View\Component;
 
@@ -27,6 +28,7 @@ class WebsiteLayout extends Component
         return view('website.layout.main', [
             'setting' => Setting::findOrFail(1),
             'locale' => app()->getLocale(),
+            'footer_services' => Service::where('status', 'active')->where('is_featured', '1')->take(5)->get(),
         ]);
     }
 }

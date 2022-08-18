@@ -57,14 +57,16 @@
 
             <div class="col-lg-3 col-md-6">
                 <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                    <h3>{{ __('locale.Pages') }}</h3>
+                    <h3>{{ __('locale.Services') }}</h3>
 
                     <ul class="quick-links">
-                        <li><a href="contact.html">{{ __('locale.Contact Us') }}</a></li>
-                        <li><a href="purchase-guide.html">Purchase Guide</a></li>
+                        @foreach($footer_services as $service)
+                        <li><a href="{{ route('service.details', ['service' => $service->id]) }}">{{ $locale == 'ar' ? $service->name_ar : $service->name }}</a></li>
+                        @endforeach
+                        <!-- <li><a href="purchase-guide.html">Purchase Guide</a></li>
                         <li><a href="faq.html">FAQ's</a></li>
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li> -->
                     </ul>
                 </div>
             </div>
