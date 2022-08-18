@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
@@ -38,9 +39,13 @@ Route::get('/projects/{project}/details', [HomeController::class, 'projectDetail
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/products', [HomeController::class, 'products'])->name('products');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contact', [HomeController::class, 'SubmitContact'])->name('contact.submit');
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('service', ServiceController::class);
     Route::get('/service/{service}/change-status', [ServiceController::class, 'changeStatus'])->name('service.change.status');

@@ -10,7 +10,7 @@
                         <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{  __('locale.overview.description') }}</p>
                         
                         <div class="banner-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
-                            <a href="contact.html" class="default-btn">{{ __('locale.Get Started') }}</a>
+                            <a href="{{ route('contact') }}" class="default-btn">{{ __('locale.Get Started') }}</a>
                         </div>
                     </div>
                 </div>

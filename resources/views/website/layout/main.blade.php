@@ -110,7 +110,7 @@
         <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
 		<script src="{{ asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
 		<script src="{{ asset('assets/js/form-validator.min.js') }}"></script>
-        <script src="{{ asset('assets/js/contact-form-script.js') }}"></script>
+        <!-- <script src="{{ asset('assets/js/contact-form-script.js') }}"></script> -->
         <script src="{{ asset('assets/js/aos.js') }}"></script>
         <script src="{{ asset('assets/js/wow.min.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>

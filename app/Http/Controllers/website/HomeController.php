@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\website;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactMail;
 use App\Models\About;
 use App\Models\Client;
 use App\Models\Employee;
@@ -11,6 +12,7 @@ use App\Models\project;
 use App\Models\Service;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class HomeController extends Controller
@@ -93,5 +95,16 @@ class HomeController extends Controller
             'locale' => app()->getLocale(),
             'setting' => Setting::find(1),
         ]);
+    }
+    public function SubmitContact(Request $request)
+    {
+        // dd($request->all());
+        Mail::to(Setting::find(1)->email)->send(new ContactMail($request->name, $request->email, $request->message));
+
+        if (Mail::failures()) {
+            return response()->Fail('عفوا, لم يتم ارسال رسالتك الرجاء المحاولة لاحقا');
+        } else {
+            return response()->success('تم إرسال الرسالة بنجاح');
+        }
     }
 }

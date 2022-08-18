@@ -69,14 +69,16 @@ Default CSS
   --main-font-family: 'Open Sans', sans-serif;
   --heading-font-family: 'Jost', sans-serif;
   --monoton-font-family: 'Monoton', cursive;
-  --main-color: #FEB302;
+  /* --main-color: #FEB302; */
+  --main-color: #be25fa;
   --optional-color: #3E019A;
   --white-color: #ffffff;
   --black-color: #14042C;
   --paragraph-color: #646464;
   --font-size: 16px;
   --transition: .6s;
-  --btn-gradient-color: radial-gradient(circle, #feb302, #f8c600, #eed900, #e0ec00, #cdff05);
+  /* --btn-gradient-color: radial-gradient(circle, #feb302, #f8c600, #eed900, #e0ec00, #cdff05); */
+  --btn-gradient-color: radial-gradient(circle, #bc1be0, #b30eea, #be22d9, #b817dc, #c318e1);
 }
 
 body {

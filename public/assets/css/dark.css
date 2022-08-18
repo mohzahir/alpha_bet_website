@@ -2,7 +2,8 @@
 Default CSS
 =================================================*/
 :root {
-  --main-color: #FEB302;
+  /* --main-color: #FEB302; */
+  --main-color: #be25fa;
   --white-color: #ffffff;
   --black-color: #000000;
 }
