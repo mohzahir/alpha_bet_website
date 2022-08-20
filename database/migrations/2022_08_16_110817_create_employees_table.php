@@ -17,12 +17,12 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('name_ar');
-            $table->longText('job_title');
-            $table->longText('job_title_ar');
-            $table->string('facebook_link');
-            $table->string('linkedin_link');
-            $table->string('twitter_link');
-            $table->string('photo');
+            $table->longText('job_title')->nullable();
+            $table->longText('job_title_ar')->nullable();
+            $table->string('facebook_link')->nullable();
+            $table->string('linkedin_link')->nullable();
+            $table->string('twitter_link')->nullable();
+            $table->string('photo')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });

@@ -39,7 +39,10 @@ class EmployeeController extends Controller
     public function store(AddEmployeeRequest $request)
     {
         // dd($request->all());
-        $photo = $request->file('photo')->store('files', 'public_folder');
+        $photo = null;
+        if ($request->hasFile('photo')) {
+            $photo = $request->file('photo')->store('files', 'public_folder');
+        }
         Employee::create([
             'name' => $request->name,
             'name_ar' => $request->name_ar,

@@ -28,11 +28,11 @@ class AddEmployeeRequest extends FormRequest
             return [
                 'name' => 'required|min:3|string',
                 'name_ar' => 'required|min:3|string',
-                'job_title' => 'required|min:3|string',
-                'job_title_ar' => 'required|min:3|string',
-                'facebook_link' => 'required|min:3|string',
-                'linkedin_link' => 'required|min:3|string',
-                'twitter_link' => 'required|min:3|string',
+                'job_title' => 'min:3|string',
+                'job_title_ar' => 'min:3|string',
+                'facebook_link' => 'min:3|string',
+                'linkedin_link' => 'min:3|string',
+                'twitter_link' => 'min:3|string',
                 'status' => 'nullable',
                 'photo' => 'nullable|mimes:jpg,png,jpeg,gif,svg',
             ];
@@ -41,13 +41,13 @@ class AddEmployeeRequest extends FormRequest
             return [
                 'name' => 'required|min:3|string',
                 'name_ar' => 'required|min:3|string',
-                'job_title' => 'required|min:3|string',
-                'job_title_ar' => 'required|min:3|string',
-                'facebook_link' => 'required|min:3|string',
-                'linkedin_link' => 'required|min:3|string',
-                'twitter_link' => 'required|min:3|string',
+                'job_title' => 'min:3|string',
+                'job_title_ar' => 'min:3|string',
+                'facebook_link' => 'min:3|string',
+                'linkedin_link' => 'min:3|string',
+                'twitter_link' => 'min:3|string',
                 'status' => 'nullable',
-                'photo' => 'required|mimes:jpg,png,jpeg,gif,svg',
+                'photo' => 'mimes:jpg,png,jpeg,gif,svg',
             ];
         }
     }

@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="main-responsive-menu">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="{{ route('home') }}">
                             <img src="{{ asset($setting->logo_black) }}" style="width: 132px; height: 50px" class="black-logo" alt="image">
                             <img src="{{ asset($setting->logo) }}" style="width: 132px; height: 50px" class="white-logo" alt="image">
                         </a>
@@ -18,7 +18,7 @@
         <div class="main-navbar">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{ route('home') }}">
                         <img src="{{ asset($setting->logo_black) }}" style="width: 132px; height: 50px" class="black-logo" class="black-logo" alt="image">
                         <img src="{{ asset($setting->logo) }}" style="width: 132px; height: 50px" class="white-logo" alt="image">
                     </a>
@@ -148,7 +148,7 @@
         <div class="container">
             <div class="main-responsive-menu">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="{{ route('home') }}">
                         <img src="{{ asset($setting->logo) }}" alt="image">
                     </a>
                 </div>
@@ -159,7 +159,7 @@
     <div class="main-navbar navbar-with-black-color">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="{{ asset($setting->logo) }}" alt="image">
                 </a>
 
