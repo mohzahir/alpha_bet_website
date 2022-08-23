@@ -12,7 +12,7 @@
         <i class="icon ion-ios-star-outline"></i>
         <div>
             <h4>{{ $service->name_ar }}</h4>
-            <p class="mg-b-0">هنا يمكنك ادارة معلومات المشاريع والتعديل عليها</p>
+            <p class="mg-b-0">هنا يمكنك ادارة معلومات الخدمات والتعديل عليها</p>
         </div>
 
     </x-slot>

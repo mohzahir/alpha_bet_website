@@ -10,7 +10,7 @@
     <i class="icon ion-ios-star-outline"></i>
     <div>
       <h4>إدارة الخدمات</h4>
-      <p class="mg-b-0">هنا يمكنك ادارة معلومات المشاريع والتعديل عليها</p>
+      <p class="mg-b-0">هنا يمكنك ادارة معلومات الخدمات والتعديل عليها</p>
     </div>
     <div class="text-left w-100">
       <a href="{{ route('service.create') }}" class="btn btn-teal btn-icon rounded-circle" title="إضافة"> <div><i class="icon ion-ios-plus-outline" style="font-size: 25px; color: #fff"></i></div></a>
