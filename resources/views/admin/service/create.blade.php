@@ -16,7 +16,7 @@
     <i class="icon ion-ios-star-outline"></i>
     <div>
       <h4>إضافة خدمة</h4>
-      <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>
+      <p class="mg-b-0">هنا يمكنك ادارة معلومات المشاريع والتعديل عليها</p>
     </div>
     
   </x-slot>

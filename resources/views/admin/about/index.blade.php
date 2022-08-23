@@ -10,7 +10,7 @@
     <i class="icon ion-ios-information-outline"></i>
     <div>
       <h4>إدارة معلومات الشركة</h4>
-      <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>
+      <p class="mg-b-0">هنا يمكنك ادارة معلومات الشركة والتعديل عليها</p>
     </div>
     <div class="text-left w-100">
     </div>

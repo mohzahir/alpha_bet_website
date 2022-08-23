@@ -11,7 +11,7 @@
     <i class="icon ion-ios-home-outline"></i>
     <div>
       <h4>لوحة التحكم</h4>
-      <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p>
+      <p class="mg-b-0">مرحبا بك في لوحة التحكم الخاصة بك</p>
     </div>
   </x-slot>
 
