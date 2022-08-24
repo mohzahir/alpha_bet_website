@@ -6,7 +6,7 @@
                     <div class="services-bg-text">SERVICES</div>
                     <span>{{ __('locale.SERVICES') }}</span>
                     <h3>{{ __('locale.We Provide the Best Quality') }} <b>{{ __('locale.SERVICES') }}</b> <span class="overlay"></span></h3>
-                    <p>We are technology solutions providing company all over the world doing over 40 years.</p>
+                    <p>{{ __('locale.service.description') }}</p>
                     <div class="services-section-btn">
                         <a href="{{ route('services') }}" class="default-btn">{{ __('locale.Explore All Services') }}</a>
                     </div>

@@ -9,7 +9,7 @@ return [
     "Contact" => "تواصل معنا",
     "WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY" => "نحن شركة رائدة بمجال التقنية و نقدم حلول تقنية لاعمالك",
     "We Make The Best IT Solutions" => "نحن نقدم افضل الحلول التقنية",
-    "overview.description" => "We are leading technology solutions providing company all over the world doing over 40 years. Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor.",
+    "overview.description" => "شركة ألفا بيتا ،شركة متعددة النشاطات و متخصصة في مجال الأنظمة الذكية و تقنية المعلومات ،نقدم خدمات مميزة (تركيب البرامج المحاسبية ،المحاسبة الألكترونية ، والتمويل للشركات و الأفراد ، التسويق ), نعمل في أنظمة التيار الخفيف (تركيب كاميرات مراقية ،أنظمة السنترلا ،أجهزة البصمة ،أنظمة إنذار الحريق)",
     "Get Started" => "إبداء الان",
     "about.title" => "شريكك الموثوق لجميع حلولك التقنية",
     "WHO WE ARE" => "من نحن",
@@ -78,6 +78,10 @@ return [
     "Explore More" => "إكتشف المزيد",
     "Why Choose Us" => "لماذا نحن ؟",
     "Our Products" => "منتجاتنا",
+    "Ready to Get Started?" => "جاهز للبدء الان؟",
+    "Contact Information" => "معلومات الاتصال",
+    "Lets Talk" => "دعنا نتحدث",
+    "service.description" => "خدمات شاملة و متكاملة بجودة عالية ،نحن نوجه مشروعك بإستخدام التقنيات الأفضل",
 
 
 ];

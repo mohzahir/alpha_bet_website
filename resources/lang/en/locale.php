@@ -79,5 +79,9 @@ return [
     "We Have A Set Of Skill With High Quality" => "We Have A Set Of Skill With High Quality",
     "Why Choose Us" => "Why Choose Us",
     "Our Products" => "Our Products",
+    "Ready to Get Started?" => "Ready to Get Started?",
+    "Contact Information" => "Contact Information",
+    "Lets Talk" => "Lets Talk",
+    "service.description" => "We are technology solutions providing company all over the world doing over 40 years.",
 
 ];

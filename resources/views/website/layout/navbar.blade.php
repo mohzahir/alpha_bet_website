@@ -1,4 +1,3 @@
-@if(request()->routeIs('home'))
 <header class="main-header-area">
     <!-- Start Navbar Area -->
     <div class="navbar-area navbar-style-two-with-color">
@@ -141,9 +140,8 @@
     <!-- End Navbar Area -->
 </header>
 
-@else
 
-<div class="navbar-area">
+<!-- <div class="navbar-area">
     <div class="main-responsive-nav">
         <div class="container">
             <div class="main-responsive-menu">
@@ -279,6 +277,4 @@
             </div>
         </div>
     </div>
-</div>
-
-@endif
+</div> -->
