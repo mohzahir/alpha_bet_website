@@ -4,7 +4,7 @@
             <div class="section-bg-text">TEAM</div>
             <span>{{ __('locale.TEAM MEMBER') }}</span>
             <h2>{{ __('locale.Our Expert IT Consultants') }} <span class="overlay"></span></h2>
-            <p>We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.</p>
+            <p>{{ __('locale.team.descr') }}</p>
         </div>
 
         <div class="row justify-content-center">

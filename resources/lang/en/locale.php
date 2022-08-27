@@ -83,5 +83,16 @@ return [
     "Contact Information" => "Contact Information",
     "Lets Talk" => "Lets Talk",
     "service.description" => "We are technology solutions providing company all over the world doing over 40 years.",
+    "why.us.descr" => "We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.",
+    "Accountant Programs" => "Accountant Programs",
+    "accountant.programs.descr" => "Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.",
+    "Low Current Systems" => "Low Current Systems",
+    "low.current.systems.descr" => "Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.",
+    "Electronic Accounting" => "Electronic Accounting",
+    "electronic.accounting.descr" => "Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.",
+    "Fund Service" => "Fund Service",
+    "fund.service.descr" => "Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.",
+    "team.descr" => "Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.",
+    "projects.descr" => "We are technology solutions providing company all over the world doing over 40 years.",
 
 ];

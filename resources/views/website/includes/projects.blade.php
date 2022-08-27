@@ -6,7 +6,7 @@
                     <div class="projects-bg-text">WORK</div>
                     <span>{{ __('locale.PROJECTS') }}</span>
                     <h3>{{ __('locale.Our Latest Incredible Clients Project') }} <span class="overlay"></span></h3>
-                    <p>We are technology solutions providing company all over the world doing over 40 years.</p>
+                    <p>{{ __('locale.projects.descr') }}</p>
                     <div class="projects-section-btn">
                         <a href="projects.html" class="default-btn">{{ __('locale.Explore All Projects') }}</a>
                     </div>

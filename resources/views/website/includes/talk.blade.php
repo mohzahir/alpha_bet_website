@@ -16,7 +16,6 @@
                     <div class="talk-bg-text">LETS TALK</div>
                     <span>{{ __('locale.LETS TALK') }}</span>
                     <h3>{{ __('locale.We Would Like To Hear From You Any Question') }} <span class="overlay"></span></h3>
-                    <p>Lorem ipsum dolor sit amet consetetur sadipscing elitre sed diam non umy eirmod tempor invidunt ut labore.</p>
                     @include('notification.flash-message')
 
                     <form id="contactFormTwo" action="{{ route('contact.submit') }}" method="post">

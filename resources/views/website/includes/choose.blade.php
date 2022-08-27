@@ -4,7 +4,7 @@
             <div class="section-bg-text">WHY US</div>
             <span>{{ __('locale.Why Choose Us') }}</span>
             <h2>{{ __('locale.We Help You To') }} <b>{{ __('locale.Increase') }}</b> {{ __('locale.Your Sale Through Solutions') }} <span class="overlay"></span></h2>
-            <p>We are leading technology solutions providing company all over the world doing over 40 years lorem ipsum dolor sit amet.</p>
+            <p>{{ __('locale.why.us.descr') }}</p>
         </div>
 
         <div class="row">
@@ -16,9 +16,9 @@
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="#">{{ __('locale.Mobile Apps') }}</a>
+                            <a href="#">{{ __('locale.Accountant Programs') }}</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                        <p>{{ __('locale.accountant.programs.descr') }}</p>
                     </div>
                 </div>
             </div>
@@ -30,9 +30,9 @@
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">{{ __('locale.Branding Strategy') }}</a>
+                            <a href="services-details.html">{{ __('locale.Low Current Systems') }}</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                        <p>{{ __('locale.low.current.systems.descr') }}</p>
                     </div>
                 </div>
             </div>
@@ -44,9 +44,9 @@
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">{{ __('locale.Graphic Design') }}</a>
+                            <a href="services-details.html">{{ __('locale.Electronic Accounting') }}</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                        <p>{{ __('locale.electronic.accounting.descr') }}</p>
                     </div>
                 </div>
             </div>
@@ -58,9 +58,9 @@
                     </div>
                     <div class="choose-content">
                         <h3>
-                            <a href="services-details.html">{{ __('locale.Search Optimization') }}</a>
+                            <a href="services-details.html">{{ __('locale.Fund Service') }}</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet conset sadipscing elitr sed diam nonumy eirm od tempor invidunt ut labore.</p>
+                        <p>{{ __('locale.fund.service.descr') }}</p>
                     </div>
                 </div>
             </div>
