@@ -12,7 +12,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="#"><img src="{{ asset('assets/images/choose/choose-1.png') }}" alt="image"></a>
+                        <a href="#"><img style="width: 160px; height: 150px;" src="{{ asset('assets/images/choose/account-manager-job-description.jpg') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
@@ -26,7 +26,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-2.png') }}" alt="image"></a>
+                        <a href="services-details.html"><img style="width: 160px; height: 150px;" src="{{ asset('assets/images/choose/low-current-systems.jpg') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
@@ -40,7 +40,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-3.png') }}" alt="image"></a>
+                        <a href="services-details.html"><img style="width: 160px; height: 150px;" src="{{ asset('assets/images/choose/accountant-programs.jpeg') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
@@ -54,7 +54,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img src="{{ asset('assets/images/choose/choose-4.png') }}" alt="image"></a>
+                        <a href="services-details.html"><img style="width: 160px; height: 150px;" src="{{ asset('assets/images/choose/fund.webp') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
