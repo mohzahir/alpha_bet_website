@@ -56,7 +56,7 @@ return [
     "KEY FEATURES" => "الخدمات المميزة",
     "We Help You To" => "نحن نساعدك على",
     "Increase" => "زيادة",
-    "Your Sale Through Solutions" => "مبيعاتك من خلال الحلول التقنية",
+    "Your Sale Through Solutions" => "الإنتاجية  في أعمالك من خلال الحلول  التقنية المقدمة",
     "We Provide the Best Quality" => "نحن نقدم افضل جودة خدمات",
     "Service Details" => "تفاصيل الخدمة",
     "Our Latest" => "اخر المشاريع",
