@@ -54,7 +54,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="single-choose-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
                     <div class="choose-image" data-tilt>
-                        <a href="services-details.html"><img style="width: 160px; height: 150px;" src="{{ asset('assets/images/choose/fund.webp') }}" alt="image"></a>
+                        <a href="services-details.html"><img style="width: 160px; height: 150px;" src="{{ asset('assets/images/choose/fund.jpeg') }}" alt="image"></a>
                     </div>
                     <div class="choose-content">
                         <h3>
