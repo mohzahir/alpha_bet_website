@@ -17,7 +17,7 @@
 
                 <div class="col-lg-6 col-md-12">
                     <div class="main-banner-image">
-                        <img src="{{ asset('assets/images/main-banner/banner.png') }}" alt="image" data-aos="fade-down" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                        <!-- <img src="{{ asset('assets/images/main-banner/banner.png') }}" alt="image" data-aos="fade-down" data-aos-delay="70" data-aos-duration="700" data-aos-once="true"> -->
 
                         <div class="banner-circle">
                             <img src="{{ asset('assets/images/main-banner/banner-circle.png') }}" alt="image" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
