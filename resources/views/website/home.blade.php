@@ -5,11 +5,15 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="main-banner-content">
-                        <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{ __('locale.WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY') }}</span>
-                        <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{ __('locale.We Make The Best IT Solutions') }}  <span class="overlay"></span></h1>
-                        <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{  __('locale.overview.description') }}</p>
-                        
-                        <div class="banner-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                        <span data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{
+                            __('locale.WE ARE LEADING TECHNOLOGY SOLUTIONS PROVIDING COMPANY') }}</span>
+                        <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{
+                            __('locale.We Make The Best IT Solutions') }} <span class="overlay"></span></h1>
+                        <p data-aos="fade-right" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">{{
+                            __('locale.overview.description') }}</p>
+
+                        <div class="banner-btn" data-aos="fade-right" data-aos-delay="70" data-aos-duration="700"
+                            data-aos-once="true">
                             <a href="{{ route('contact') }}" class="default-btn">{{ __('locale.Get Started') }}</a>
                         </div>
                     </div>
@@ -17,10 +21,13 @@
 
                 <div class="col-lg-6 col-md-12">
                     <div class="main-banner-image">
-                        <!-- <img src="{{ asset('assets/images/main-banner/banner.png') }}" alt="image" data-aos="fade-down" data-aos-delay="70" data-aos-duration="700" data-aos-once="true"> -->
+                        <div style="width: 444px; height: 532px"></div>
+                        <!-- <img style="width: 444px; height: 532px" src="{{ asset('assets/images/main-banner/banner.png') }}" alt="image" data-aos="fade-down"
+                            data-aos-delay="70" data-aos-duration="700" data-aos-once="true"> -->
 
                         <div class="banner-circle">
-                            <img src="{{ asset('assets/images/main-banner/banner-circle.png') }}" alt="image" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                            <img src="{{ asset('assets/images/main-banner/banner-circle.png') }}" alt="image"
+                                data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
                         </div>
                     </div>
                 </div>
@@ -63,22 +70,28 @@
                 <div class="row justify-content-center">
                     @if(count($products) > 0)
                     @foreach($products as $product)
-                    <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"
+                        data-aos-once="true">
                         <div class="single-features-card" data-tilt>
                             <div class="features-image" data-tilt>
-                                <a href="{{ route('products') }}"><img style="width: 90px; height: 96px" src="{{ asset($product->photo) }}" alt="image"></a>
+                                <a href="{{ route('products') }}"><img style="width: 90px; height: 96px"
+                                        src="{{ asset($product->photo) }}" alt="image"></a>
                             </div>
                             <div class="content">
                                 <h3>
-                                    <a href="{{ route('products') }}">{{ $locale == 'ar' ? $product->name_ar : $product->name }}</a>
+                                    <a href="{{ route('products') }}">{{ $locale == 'ar' ? $product->name_ar :
+                                        $product->name }}</a>
                                 </h3>
-                                <p>{{ $locale == 'ar' ? \Str::limit($product->descr_ar, '100') : \Str::limit($product->descr, '100') }}</p>
+                                <p>{{ $locale == 'ar' ? \Str::limit($product->descr_ar, '100') :
+                                    \Str::limit($product->descr, '100') }}</p>
                             </div>
                             <div class="hover-content">
                                 <h3>
-                                    <a href="{{ route('products') }}">{{ $locale == 'ar' ? $product->name_ar : $product->name }}</a>
+                                    <a href="{{ route('products') }}">{{ $locale == 'ar' ? $product->name_ar :
+                                        $product->name }}</a>
                                 </h3>
-                                <a href="{{ route('products') }}" class="features-btn" }}>{{__('locale.View More') }}</a>
+                                <a href="{{ route('products') }}" class="features-btn" }}>{{__('locale.View More')
+                                    }}</a>
                             </div>
                         </div>
                     </div>
